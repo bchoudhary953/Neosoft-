@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="org.gnome.FileRoller.desktop" open-window-count="1" score="58.5" last-seen="1600949646"/>
+    <application id="gnome-control-center.desktop" open-window-count="0" score="62.501708984375" last-seen="1600843750"/>
+    <application id="yelp.desktop" open-window-count="0" score="0.25" last-seen="1600622502"/>
+    <application id="firefox.desktop" open-window-count="2" score="13739.167755126953" last-seen="1600953735"/>
+    <application id="gedit.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="156.16049194335938" last-seen="1600949914"/>
+    <application id="update-manager.desktop" open-window-count="0" score="0" last-seen="1600506233"/>
+    <application id="software-properties-gtk.desktop" open-window-count="0" score="0.25" last-seen="1600505017"/>
+    <application id="eog.desktop" open-window-count="134" score="142.75" last-seen="1600951446"/>
+    <application id="google-chrome.desktop" open-window-count="1" score="37.25" last-seen="1600949933"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="2" score="2413.0000305175781" last-seen="1600953629"/>
+    <application id="anydesk.desktop" open-window-count="0" score="32" last-seen="1600694947"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="0" score="155.80859375" last-seen="1600951043"/>
+    <application id="skypeforlinux.desktop" open-window-count="1" score="52" last-seen="1600953225"/>
+    <application id="libreoffice-impress.desktop" open-window-count="0" score="268.5" last-seen="1600767722"/>
+    <application id="org.gnome.Totem.desktop" open-window-count="0" score="0.75" last-seen="1600620249"/>
+    <application id="org.gnome.Software.desktop" open-window-count="0" score="1386.25" last-seen="1600664669"/>
+    <application id="thunderbird.desktop" open-window-count="1" score="12.5" last-seen="1600946951"/>
+    <application id="libreoffice-writer.desktop" open-window-count="0" score="0" last-seen="1600952156"/>
+  </context>
+</application-state>

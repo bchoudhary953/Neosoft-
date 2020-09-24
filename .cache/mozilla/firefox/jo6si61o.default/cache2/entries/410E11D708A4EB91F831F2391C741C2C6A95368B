@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149604108-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149604108-1');
+</script>
+
+<meta http-equiv="Cache-Control" content="no-store" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+    <link rel="icon" type="image/png" href="frontend2/img/favicon.ico">
+    <title>DSLRoot.com - Residential IP Network</title>
+    <!-- <base href="/frontend2/">-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="frontend2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="frontend2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="frontend2/css/simple-line-icons.css">
+    <link rel="stylesheet" href="frontend2/css/animate.css">
+    <link rel="stylesheet" href="frontend2/css/main.css">
+    <link rel="stylesheet" href="frontend2/css/responsive.css">
+    <link rel="stylesheet" href="frontend2/css/ashwood.slider.css">
+</head>
+
+<body style="padding-bottom: 0px;">
+    <!-- Header Section Start -->
+    <header id="hero-area">
+        <div class="overlay"></div>
+        <div id="pre-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <div class="site-info">
+                            <p>Your IP Address is <span>43.240.66.100</span></p>
+                        </div>
+                        <div class=" pull-right">
+                            <ul class="nav nav-inline">
+                                <li class="nav-item ">
+                                    <a class="nav-link hd-menu-al" href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="nav-item login">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-user"></i>Log In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-toggleable-sm navbar-light bg-faded menu-bg">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="frontend2/img/logo.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end text-center" id="navbarCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="./">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how.html">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./#pricing">Buy Now</a>
+                        </li>
+                        <li class="nav-item hd-menu">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        
+    <section class="section carousel-section ashwood">
+        <div class="ashwood__slider">
+            <div class="slide-1 active"></div>
+            <div class="slide-2"></div>
+            <div class="slide-3"></div>
+            <div class="slide-4"></div>
+            <div class="slide-5"></div>
+            <div class="slide-6"></div>
+        </div>
+        <div class="ashwood__content">
+            <div class="container" style="position: relative;">
+                <div class="ashwood__slider-addon">
+                    <div class="slideaddon-1 active" style="display: none"></div>
+                    <div class="slideaddon-2" style="display: none"></div>
+                    <div class="slideaddon-3" style="display: none"></div>
+                    <div class="slideaddon-4" style="display: none"></div>
+                    <div class="slideaddon-5" style="display: none"></div>
+                    <div class="slideaddon-6" style="display: none"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item active">
+                            <div class="contents text-left">
+                                <h1 class="fadeInDown"><!--Get Unlimited Access<br> to Local US Residential IPs<br> in All Major States-->Welcome to 4G/LTE (Mobile Proxy) Residential IP Network</h1>
+                                <p class="lead"> We offer a unique IP solution â€“ unlimited access to local residential IPs from all across the US at the fairest rates on the market. Pick from over 70 available locations in different States and connect immediately with an ability to change IP in just one click. Benefit from using local residential IP addresses by domestic 4G/LTE, Cable & DSL providers. Improve your productivity flow with our unique IP solution and achieve better results where regular VPN providers simply fail to deliver.
+                                <!--We offer a unique IP solution â€“ a full access to unlimited residential IPs from all across the US at the fairest rates on the market. Pick from over 70 available locations in different States and connect immediately with an ability to change your IP in just one click. Benefit from using local residential IP addresses by domestic providers (Verizon, Comcast, Century Link, AT&Tâ€¦). Improve your productivity flow with our unique IP solution and achieve better results where regular VPN providers simply fail to deliver.--></p>
+                                <a rel="nofollow" href="#pricing" class="btn btn-common ">Buy now</a>
+                                <a rel="nofollow" href="#pricing" class="btn btn-border ">Try it free</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Section End -->
+    <!-- About Section Start -->
+    <!-- About Section End -->
+    <!-- Services Section Start -->
+    <!-- Services Section End -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section section-portfolio">
+        <!-- Container Starts -->
+        <div class="row">
+            <div class="container contents text-center portfolio-item">
+                <p class="lead">Find out how quick and easy it is to use local US residential IPs</p>
+                <a rel="nofollow" href="how.html" class="btn btn-common">How it works</a>
+            </div>
+        </div>
+    </section>
+
+  <section class="section section-how2">
+        <div class="container">
+            <div class="contents text-center col-md-10 offset-md-1">
+                <p class="lead how-title">
+                </p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section Ends -->
+    <!-- Why Section Start -->
+    <!-- End Get-Strted Section -->
+    <!-- Start Pricing Table Section -->
+    <div id="pricing" class="section pricing-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Single User Solutions</h2>
+                <h3 class="section-subtitle col-md-6">Single user access to local US residential IPs. Includes unlimited software access and 24/7 customer support.</h3>
+            </div>
+            <div id="switch-cont" class="section-header text-center mobile-price">
+                <button class="switch-button">Free</button>
+                <button class="switch-button">Week</button>
+                <button class="switch-button switch-selected">Month</button>
+                <button class="switch-button">Â½ Year</button>
+                <button class="switch-button">Year</button>
+            </div>
+            <div class="row pricing-tables d-flex align-items-stretch">
+                <div class="col cl-p">
+                    <div class="pricing-table">
+                        <div class="plan-name color-1">
+                            <h3>Free trial</h3>
+                        </div>
+                        <div class="plan-period">
+                            <div class="period-title">Period</div>
+                            <div class="period-value">1 hours</div>
+                        </div>
+                        <div class="plan-location">
+                            <div class="location-title">Access to locations</div>
+                            <div class="location-value">2 locations</div>
+                        </div>
+                        <div class="plan-price">
+                            <div class="interval">Price</div>
+                            <div class="price-value">FREE</div>
+                            <div class="price">&nbsp;</div>
+                        </div>
+                        <div class="plan-signup">
+                            <a href="./contact.html" class="btn btn-common">Try now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col cl-p">
+                    <div class="pricing-table">
+                        <div class="plan-name color-1">
+                            <h3>Week</h3>
+                        </div>
+                        <div class="plan-period">
+                            <div class="period-title">Period</div>
+                            <div class="period-value">7 days</div>
+                        </div>
+                        <div class="plan-location">
+                            <div class="location-title">Access to locations</div>
+                            <div class="location-value">Unlimited</div>
+                        </div>
+                        <div class="plan-price">
+                            <div class="interval">Price</div>
+                            <div class="price-value">$50</div>
+                            <div class="price">&nbsp;</div>
+                        </div>
+                        <div class="plan-signup">
+                            <a href="./contact.html" class="btn btn-common">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col cl-p">
+                    <div class="pricing-table pricing-selected highlight-plan">
+                        <div class="plan-name color-2">
+                            <h3>Month</h3>
+                        </div>
+                        <div class="plan-period">
+                            <div class="period-title">Period</div>
+                            <div class="period-value">1 month</div>
+                        </div>
+                        <div class="plan-location">
+                            <div class="location-title">Access to locations</div>
+                            <div class="location-value">Unlimited</div>
+                        </div>
+                        <div class="plan-price">
+                            <div class="interval">Price</div>
+                            <div class="price-value">$190</div>
+                            <div class="price">Save $<b>24</b></div>
+                        </div>
+                        <div class="plan-signup">
+                            <a href="./contact.html" class="btn btn-border color-1">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col cl-p">
+                    <div class="pricing-table">
+                        <div class="plan-name color-1">
+                            <h3>Half-Year</h3>
+                        </div>
+                        <div class="plan-period">
+                            <div class="period-title">Period</div>
+                            <div class="period-value">6 month</div>
+                        </div>
+                        <div class="plan-location">
+                            <div class="location-title">Access to locations</div>
+                            <div class="location-value">Unlimited</div>
+                        </div>
+                        <div class="plan-price">
+                            <div class="interval">Price</div>
+                            <div class="price-value">$990</div>
+                            <div class="price">Save $300</div>
+                        </div>
+                        <div class="plan-signup">
+                            <a href="./contact.html" class="btn btn-common">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col cl-p">
+                    <div class="pricing-table">
+                        <div class="plan-name color-1">
+                            <h3>Year</h3>
+                        </div>
+                        <div class="plan-period">
+                            <div class="period-title">Period</div>
+                            <div class="period-value">12 month</div>
+                        </div>
+                        <div class="plan-location">
+                            <div class="location-title">Access to locations</div>
+                            <div class="location-value">Unlimited</div>
+                        </div>
+                        <div class="plan-price">
+                            <div class="interval"><span>Price</span></div>
+                            <div class="price-value">$1 750</div>
+                            <div class="price">Save $850</div>
+                        </div>
+                        <div class="plan-signup">
+                            <a href="./contact.html" class="btn btn-common">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Pricing Table Section -->
+    <!-- Footer Section Start -->
+    <footer style="position: relative;">
+        <!-- Footer Area Start -->
+        <section class="footer-Content">
+            <div class="container">
+                <h3 class="logo-title text-center">Business Solutions</h3>
+                <div class="row d-flex">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="widget">
+                            <div class="textwidget text-left">
+                                <p class="title"><!--MULTI-USER SOLUTION-->DEDICATED SOLUTION
+
+                                    <br> FOR BUSINESS</p>
+                                <p class="text-content "><!--Simultaneous multi-user full access to unlimited residential IPs from all across the US-->
+                                We offer dedicated access to residential IPs from all across the US based on your specific needs</p>
+                                <a href="contact.html">Contact us for details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="widget">
+                            <div class="textwidget text-right text-mob">
+                                <p class="title">API SOLUTION
+                                    <br> FOR BUSINESS
+</p>
+                                <p class="text-content ">Get our service integrated into your system using our API solution</p>
+                                <a class href="contact.html">Contact us for details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer area End -->
+        <!-- Copyright Start  -->
+        
+    <footer>        
+        <!-- Footer area End -->
+        <!-- Copyright Start  -->
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex foot-mobile justify-content-md-between">
+                        <div class="site-info pull-left">
+                            <p>Â© 2019-2020 DSLRoot. All rights reserved</p>
+                        </div>
+                        <div class="nav-footer">
+                            <ul class="nav nav-inline">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="terms.html">Terms of Use</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="policy.html">Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+    </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<div class="col-reg deactive" data-button-name="reg">Registration</div>-->
+                    <div class="col-log" data-button-name="log">Login</div>
+                </div>
+                <!--
+                <div class="modal-body" data-show="0" data-modal-name="reg">
+                    <p class="modal-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore pariatur necessitatibus beatae eveniet blanditiis eos sint dolores hic.</p>
+                    <form>
+                        <div class="form-box-50 form-box-space-left">
+                            <div class="form-row">
+                                <label for="pi-name">Name:</label>
+                                <input id="pi-name" type="text" placeholder="Alex Berg" autocomplete="off">
+                            </div>
+                            <div class="form-row">
+                                <label for="pi-phone">Mobile:</label>
+                                <input id="pi-phone" type="tel" placeholder="+ 765 35 367 23 46" autocomplete="off">
+                            </div>
+                            <div class="form-row">
+                                <label for="pi-email">E-mail:</label>
+                                <input id="pi-email" type="text" placeholder="mail@mail.com" autocomplete="off">
+                            </div>
+                            <div class="form-row">
+                                <label for="pi-pas">Password:</label>
+                                <input id="pi-pas" type="password" placeholder="******" autocomplete="off">
+                            </div>
+                        </div>
+                        <label class="txt-normal">
+                            <input type="checkbox"> I have read and accept the <a href="terms.html">Terms Of Use</a> and <a href="privacy.html">Privacy Policy</a>
+                        </label>
+                    </form>
+                    <button type="button" class="btn btn-primary">Registration</button>
+                </div>-->
+                <div class="modal-body" data-show="1" data-modal-name="log">
+                    <p class="modal-text" id="log-msg">&nbsp;<!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore pariatur
+                    necessitatibus beatae eveniet blanditiis eos sint dolores hic.--></p>
+                    <form id="my_form">
+                        <div class="form-box-50 form-box-space-left">
+                            <div class="form-row">
+                                <label for="pi-email-id">User ID<!-- or e-mail-->:</label>
+                                <input id="pi-email-id" type="text" placeholder="Alex Berg" autocomplete="off">
+                            </div>
+                            <div class="form-row">
+                                <label for="pi-pas-id">Password:</label>
+                                <input id="pi-pas-id" type="password" placeholder="******" autocomplete="off">
+                            </div>
+                        </div>
+                        <!--<div class="form-row">
+                            <label class="txt-normal">
+                                <input type="checkbox"> Remember me</label>
+                            <a href="#">Forgot your password?</a>
+                        </div>-->
+                    </form>
+                    <button type="button" onclick='login();' class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+function login()
+{
+var gurl='';
+
+$.ajaxSetup({
+             crossDomain: true,
+             xhrFields: {
+                 withCredentials: true
+             }
+         });
+
+		$.ajax({
+
+		//
+//url: "dynamic/dashboard.html",
+//			url: ((typeof gurl !== 'undefined')?gurl:"http://server.dslroot.com/?&UserID=3&tplsTotal=1&tpl[1]=tpl_new_content_list2&new_site=1"),
+			//url: (( gurl != '')?gurl:document.location.origin +'/'+"/?&UserID=3&tplsTotal=1&tpl[1]=tpl_new_content_list2&new_site=1"),
+			url: (( gurl != '')?gurl:'http://dashboard.dslroot.com' +'/'+"?UserID="+$("#pi-email-id").val()+"&tplsTotal=1&tpl[1]=tpl_new_content_list2&new_site=1"),
+type: "POST"			, 
+data: "password="+$("#pi-pas-id").val(),
+
+
+			context: document.body,
+			success: function(response) {
+
+//				$( "#dynamic-content" ).html(response);
+				//$( "#dynamic-headercontent" ).html(response);
+//[0].outerHTML
+//accinf=($(response).find("#my-account-page").outerHtml());
+  //alert($(response).find("#user__info-id").html());
+//if ($(response).find("#nologin").html()!='1')
+
+if ($(response).find(".user__info-id").html()!==undefined)
+  {
+  window.location='http://dashboard.dslroot.com/';
+  }
+  else
+  {
+	$('#log-msg').html('<font color=red>Invalid login data</font>');
+	}
+
+			}
+		});
+}
+</script>    <!-- Footer Section End -->
+    <!-- Go To Top Link -->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="frontend2/js/jquery-min.js"></script>
+    <script src="frontend2/js/tether.min.js"></script>
+    <script src="frontend2/js/bootstrap.min.js"></script>
+    <script src="frontend2/js/mixitup.min.js"></script>
+    <script src="frontend2/js/jquery.nav.js"></script>
+    <script src="frontend2/js/jquery.counterup.min.js"></script>
+    <script src="frontend2/js/waypoints.min.js"></script>
+    <script src="frontend2/js/form-validator.min.js"></script>
+    <script src="frontend2/js/contact-form-script.js"></script>
+    <script src="frontend2/js/main.js"></script>
+    <script src="frontend2/js/price.js"></script>
+    <script src="frontend2/js/color.js"></script>
+    <script src="frontend2/js/ashwood.slider.js"></script>
+    <script>
+    slider = new AshwoodSlider({
+        speed: 700,
+        delay: 2000,
+        addonSlider: true,
+        options: {
+            width: 213,
+            height: 213,
+            delay: 550,
+            speed: 350
+        }
+    }).init();
+
+
+
+
+
+    </script>
+
+
+    </script>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 10792102;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/10792102/" rel="nofollow">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+
+</body>
+
+</html>A/w”ˆe      _jâÞ_jêB$WL_jâÈ   v    :http://dslroot.com/?gclid=CjwKCAjwwab7BRBAEiwAapqpTDlPScY1Sn1-8dU16Rk0dUPEl0-QkjftK2C6_4N8kuOzT5F1GIJi0RoCPk4QAvD_BwE necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Wed, 23 Sep 2020 05:53:15 GMT
+Server: Apache/2.2.31 (Unix) mod_ssl/2.2.31 OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 mod_bwlimited/1.4
+X-Powered-By: PHP/5.3.29
+Content-Type: text/html
+ original-response-headers Date: Wed, 23 Sep 2020 05:53:15 GMT
+Server: Apache/2.2.31 (Unix) mod_ssl/2.2.31 OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 mod_bwlimited/1.4
+X-Powered-By: PHP/5.3.29
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+ ctid 1 uncompressed-len 0 predictor::resource-count 46 predictor::https://www.googletagmanager.com/gtag/js?id=UA-149604108-1 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/css/bootstrap.min.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/font-awesome.min.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/simple-line-icons.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/animate.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/main.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/responsive.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/css/ashwood.slider.css 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/img/logo.svg 1,1,1600840392,4097 net-response-time-onstart 328 net-response-time-onstop 510 predictor::http://dslroot.com/frontend2/js/jquery-min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/tether.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/bootstrap.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/mixitup.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/jquery.nav.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/jquery.counterup.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/waypoints.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/form-validator.min.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/contact-form-script.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/main.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/price.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/color.js 1,1,1600840392,4097 predictor::http://dslroot.com/frontend2/js/ashwood.slider.js 1,1,1600840392,4097 predictor::https://www.google-analytics.com/analytics.js 1,1,1600840392,4096 predictor::http://fonts.googleapis.com/css?family=Roboto:700,400,300 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg0.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/how_it2.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/footer_bg.jpg 1,1,1600840392,4096 predictor::https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/fonts/fontawesome-webfont.woff2?v=4.7.0 1,1,1600840392,4096 predictor::https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 1,1,1600840392,4096 predictor::https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2 1,1,1600840392,4096 predictor::http://cdn.livechatinc.com/tracking.js 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider.png 1,1,1600840392,4096 predictor::https://secure.livechatinc.com/licence/10792102/v2/get_dynamic_config.js?t=1600840394766&referrer=&url=http%3A%2F%2Fdslroot.com%2F%3Fgclid%3DCjwKCAjwwab7BRBAEiwAapqpTDlPScY1Sn1-8dU16Rk0dUPEl0-QkjftK2C6_4N8kuOzT5F1GIJi0RoCPk4QAvD_BwE&params=&channel_type=code&jsonp=__lc_data_556124 1,1,1600840392,4096 predictor::https://secure.livechatinc.com/licence/10792102/v2/get_static_config.0.615.3.3.947.176.4.148.6.1.1.1.10.js?&jsonp=__lc_data_static_config 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg3.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider_1.png 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg1.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider_2.png 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg4.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider_3.png 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg2.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider_4.png 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/bg5.jpg 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/icon_slider_5.png 1,1,1600840392,4096 predictor::http://dslroot.com/frontend2/img/how_it_mb2.jpg 1,1,1600840414,4096   aO

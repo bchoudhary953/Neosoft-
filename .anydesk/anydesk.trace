@@ -1,0 +1,669 @@
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - * AnyDesk Linux Startup *
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - * Build 20200824175011
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - * Prefix ad
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - 
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-19 09:26:14.490         ad   main   2567   2567                                  main - Found GLib Version: 2.56.
+   info 2020-09-19 09:26:14.513         ad   main   2567   2567                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-19 09:26:14.513         ad   main   2567   2567                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-19 09:26:14.516       tray   main   2567   2567                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-19 09:26:14.516       tray   main   2567   2567                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-19 09:26:14.542       tray   main   2567   2567                       base.signal.hub - 1 threads.
+   info 2020-09-19 09:26:14.542       tray   main   2567   2567                    app.tunnel_ft_comp - Ready.
+   info 2020-09-19 09:26:14.583       tray   ctrl   2567   2577                      unix_app.control - Control startup.
+  error 2020-09-19 09:26:14.584       tray   ctrl   2567   2577              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-19 09:26:14.589       tray   wrk0   2567   2578              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-19 09:26:14.589       tray   wrk0   2567   2578                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-19 09:26:14.590       tray   wrk0   2567   2578                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - * AnyDesk Linux Startup *
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - * Build 20200824175011
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - * Prefix ad
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - 
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-19 09:26:26.302         ad   main   2658   2658                                  main - Found GLib Version: 2.56.
+   info 2020-09-19 09:26:26.317         ad   main   2658   2658                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-19 09:26:26.317         ad   main   2658   2658                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-19 09:26:26.318         ad   main   2658   2658                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-19 09:26:26.318         ad   main   2658   2658                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-19 09:26:26.318         ad   main   2658   2658                                  main - Starting frontend process (2658).
+   info 2020-09-19 09:26:26.320   frontend   main   2658   2658                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-19 09:26:26.320   frontend   main   2658   2658                           gui.gui_app - Using std-resolution bitmaps.
+warning 2020-09-19 09:26:26.334   frontend   main   2658   2658                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-19 09:26:26.338   frontend   main   2658   2658                       base.signal.hub - 8 threads.
+   info 2020-09-19 09:26:26.338   frontend   timr   2658   2663          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-19 09:26:26.427   frontend   ctrl   2658   2667                     unix_app.frontend - Frontend startup.
+   info 2020-09-19 09:26:26.427   frontend   ctrl   2658   2667                     unix_app.frontend - Logging the frontend in.
+warning 2020-09-19 09:26:26.428   frontend   ctrl   2658   2667                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+warning 2020-09-19 09:26:26.651   frontend   wrk1   2658   2669                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-19 09:26:26.669   frontend   main   2658   2658                     unix_app.frontend - Monitoring online states.
+   info 2020-09-19 09:26:26.669   frontend   main   2658   2658                     unix_app.frontend - Monitoring online states.
+   info 2020-09-19 09:26:26.673   frontend   main   2658   2658                     unix_app.frontend - Monitoring online states.
+   info 2020-09-19 09:26:26.767   frontend   main   2658   2658                     unix_app.frontend - Monitoring online states.
+   info 2020-09-19 09:26:26.768   frontend   main   2658   2658                     unix_app.frontend - Monitoring online states.
+   info 2020-09-19 09:26:27.011   frontend    x11   2658   2662                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-19 09:26:27.011   frontend    x11   2658   2662                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-19 09:26:27.011   frontend    x11   2658   2662                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-19 09:33:04.172   frontend   wrk0   2658   2668                     unix_app.frontend - Service connection lost.
+  error 2020-09-19 09:33:04.173       tray   wrk0   2567   2578                      unix_app.control - Service connection lost.
+   info 2020-09-19 09:33:04.173       tray   ctrl   2567   2577                    app.tunnel_ft_comp - Stopping file component.
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - * AnyDesk Linux Startup *
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - * Build 20200824175011
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - * Prefix ad
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - 
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-20 12:37:44.390         ad   main   1675   1675                                  main - Found GLib Version: 2.56.
+   info 2020-09-20 12:37:44.431         ad   main   1675   1675                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-20 12:37:44.431         ad   main   1675   1675                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-20 12:37:44.445       tray   main   1675   1675                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-20 12:37:44.445       tray   main   1675   1675                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-20 12:37:44.468       tray   main   1675   1675                       base.signal.hub - 1 threads.
+   info 2020-09-20 12:37:44.468       tray   main   1675   1675                    app.tunnel_ft_comp - Ready.
+   info 2020-09-20 12:37:44.506       tray   ctrl   1675   1698                      unix_app.control - Control startup.
+  error 2020-09-20 12:37:44.507       tray   ctrl   1675   1698              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-20 12:37:44.518       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-20 12:37:44.518       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-20 12:37:44.520       tray   wrk0   1675   1699                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - * AnyDesk Linux Startup *
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - * Build 20200824175011
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - * Prefix ad
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-20 12:41:22.261         ad   main   2160   2160                                  main - 
+   info 2020-09-20 12:41:22.262         ad   main   2160   2160                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-20 12:41:22.262         ad   main   2160   2160                                  main - Found GLib Version: 2.56.
+   info 2020-09-20 12:41:22.276         ad   main   2160   2160                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-20 12:41:22.276         ad   main   2160   2160                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-20 12:41:22.277         ad   main   2160   2160                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-20 12:41:22.277         ad   main   2160   2160                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-20 12:41:22.277         ad   main   2160   2160                                  main - Starting frontend process (2160).
+   info 2020-09-20 12:41:22.279   frontend   main   2160   2160                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-20 12:41:22.279   frontend   main   2160   2160                           gui.gui_app - Using std-resolution bitmaps.
+warning 2020-09-20 12:41:22.294   frontend   main   2160   2160                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-20 12:41:22.299   frontend   main   2160   2160                       base.signal.hub - 8 threads.
+   info 2020-09-20 12:41:22.299   frontend   timr   2160   2165          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-20 12:41:22.390   frontend   ctrl   2160   2169                     unix_app.frontend - Frontend startup.
+   info 2020-09-20 12:41:22.390   frontend   ctrl   2160   2169                     unix_app.frontend - Logging the frontend in.
+warning 2020-09-20 12:41:22.391   frontend   ctrl   2160   2169                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+warning 2020-09-20 12:41:22.586   frontend   wrk1   2160   2171                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-20 12:41:22.633   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:41:22.636   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:41:22.645   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:41:22.646   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:41:22.648   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:41:22.991   frontend    x11   2160   2164                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-20 12:41:22.991   frontend    x11   2160   2164                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-20 12:41:22.991   frontend    x11   2160   2164                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-20 12:48:11.178   frontend   ctrl   2160   2169                     unix_app.frontend - Frontend shutdown.
+   info 2020-09-20 12:48:11.179   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:48:11.180   frontend   main   2160   2160                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 12:48:12.985   frontend   ctrl   2160   2169                       base.signal.hub - Control quit.
+   info 2020-09-20 12:48:12.987   frontend   timr   2160   2165          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-20 12:48:12.992   frontend   main   2160   2160              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-20 12:48:12.993   frontend   main   2160   2160                                  main - Exiting normally.
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - * AnyDesk Linux Startup *
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - * Build 20200824175011
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - * Prefix ad
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - 
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-20 17:20:41.769         ad   main   4461   4461                                  main - Found GLib Version: 2.56.
+   info 2020-09-20 17:20:41.784         ad   main   4461   4461                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-20 17:20:41.784         ad   main   4461   4461                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-20 17:20:41.785         ad   main   4461   4461                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-20 17:20:41.785         ad   main   4461   4461                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-20 17:20:41.785         ad   main   4461   4461                                  main - Starting frontend process (4461).
+   info 2020-09-20 17:20:41.786   frontend   main   4461   4461                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-20 17:20:41.786   frontend   main   4461   4461                           gui.gui_app - Using std-resolution bitmaps.
+warning 2020-09-20 17:20:41.802   frontend   main   4461   4461                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-20 17:20:41.805   frontend   main   4461   4461                       base.signal.hub - 8 threads.
+   info 2020-09-20 17:20:41.806   frontend   timr   4461   4467          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-20 17:20:41.888   frontend   ctrl   4461   4471                     unix_app.frontend - Frontend startup.
+   info 2020-09-20 17:20:41.888   frontend   ctrl   4461   4471                     unix_app.frontend - Logging the frontend in.
+warning 2020-09-20 17:20:41.888   frontend   ctrl   4461   4471                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+warning 2020-09-20 17:20:42.100   frontend   wrk1   4461   4473                         app.user_info - Could not update user image (File not found: /home/webwerks/.face.icon). Defaulting.
+   info 2020-09-20 17:20:42.171   frontend   main   4461   4461                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 17:20:42.171   frontend   main   4461   4461                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 17:20:42.173   frontend   main   4461   4461                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 17:20:42.424   frontend    x11   4461   4466                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-20 17:20:42.424   frontend    x11   4461   4466                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-20 17:20:42.424   frontend    x11   4461   4466                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-20 17:20:42.425   frontend   main   4461   4461                     unix_app.frontend - Monitoring online states.
+   info 2020-09-20 17:20:42.426   frontend   main   4461   4461                     unix_app.frontend - Monitoring online states.
+  error 2020-09-21 04:12:12.937       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=24, 0 bytes).
+  error 2020-09-21 04:12:12.937       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - * AnyDesk Linux Startup *
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - * Build 20200824175011
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - * Prefix ad
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - 
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-21 04:12:12.946         ad   main   4954   4954                                  main - Found GLib Version: 2.56.
+   info 2020-09-21 04:12:12.960         ad   main   4954   4954                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-21 04:12:12.960         ad   main   4954   4954                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-21 04:12:12.960         ad   main   4954   4954                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-21 04:12:12.960         ad   main   4954   4954                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-21 04:12:12.960         ad   main   4954   4954                                  main - Starting backend process (4954).
+   info 2020-09-21 04:12:12.962    backend   main   4954   4954                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-21 04:12:12.962    backend   main   4954   4954                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-21 04:12:12.978    backend   main   4954   4954                       base.signal.hub - 8 threads.
+   info 2020-09-21 04:12:12.979    backend   timr   4954   4958          base.signal.local.timer_impl - Initialized master timer.
+warning 2020-09-21 04:12:12.979    backend   main   4954   4954           desk_rt.system_event_source - Harddrive status not working, this system has no support.
+   info 2020-09-21 04:12:12.983    backend   main   4954   4954                      audio.pa_wrapper - Connecting to PulseAudio server
+   info 2020-09-21 04:12:12.983    backend     pa   4954   4959                      audio.pa_wrapper - Authorizing on PulseAudio server
+   info 2020-09-21 04:12:12.984    backend     pa   4954   4959                      audio.pa_wrapper - Connection to PulseAudio server established
+   info 2020-09-21 04:12:12.002    backend   ctrl   4954   4960                      unix_app.backend - Backend is starting up.
+   info 2020-09-21 04:12:13.028    backend   wrk0   4954   4961                      unix_app.backend - Incoming IPC connection.
+   info 2020-09-21 04:12:13.028    backend   timr   4954   4971          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 04:12:13.029    backend   wrk0   4954   4961                   app.backend_session - Initializing session.
+   info 2020-09-21 04:12:13.029    backend   ctrl   4954   4960                   desk_rt.x11_capture - Starting capture.
+   info 2020-09-21 04:12:13.029    backend   wrk0   4954   4961                      unix_app.backend - Session count: 1
+   info 2020-09-21 04:12:13.030    backend   ctrl   4954   4960                      unix_app.backend - Backend startup finished.
+   info 2020-09-21 04:12:13.030    backend   ctrl   4954   4960                   app.backend_session - Starting sockets.
+   info 2020-09-21 04:12:13.033    backend   wrk1   4954   4962                   app.backend_session - Incoming session request: neosoft (304887062)
+   info 2020-09-21 04:12:13.033    backend   wrk1   4954   4962                   app.backend_session - Remote caps: sound_src, sound_sink, keyboard_sink, keyboard2, switch_sides, clip_paste_files, clip_src_files, block_input, request_vp_dimensions, keyboard_unicode, sysinfo, remote_restart, volatile_token, filetransfer_server, filetransfer_client, whiteboard, tcp_tunnel, privacy_feature, vpn, encoder_reset, two_factor_auth
+   info 2020-09-21 04:12:13.033    backend   wrk1   4954   4962                   app.backend_session - Remote OS: Linux, Connection flags: direct paid 3 
+   info 2020-09-21 04:12:13.033    backend   wrk1   4954   4962                   app.backend_session - Remote version: 6.0.0
+   info 2020-09-21 04:12:13.033    backend   wrk1   4954   4962                   app.backend_session - Trying to register a new backend session.
+  error 2020-09-21 04:12:13.039    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=42, 0 bytes).
+  error 2020-09-21 04:12:13.039    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 04:12:13.088    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 04:12:25.282    backend   ctrl   4954   4960                   app.backend_session - Starting session (deskrt, clipboard, chat, audio, input, tcp_tunnel).
+   info 2020-09-21 04:12:25.283    backend   timr   4954   4974          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 04:12:25.284    backend   ctrl   4954   4960                       desk_rt.encoder - 4 segments.
+   info 2020-09-21 04:12:25.510    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 04:12:25.510    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 04:12:25.511    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 04:12:25.512    backend   ctrl   4954   4960             desk_rt.capture_component - Starting capture.
+   info 2020-09-21 04:12:25.750    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 04:12:25.750    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 04:12:25.750    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 04:12:25.752    backend   ctrl   4954   4960             desk_rt.capture_component - Sending screen privacy status: off (no change).
+   info 2020-09-21 04:12:25.985    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: unknown
+   info 2020-09-21 04:12:25.986    backend   ctrl   4954   4960                   app.keybd_sink_comp - Keyboard layout changed to: unknown
+   info 2020-09-21 04:12:25.986    backend   ctrl   4954   4960                        app.mouse_sink - Starting mouse sink.
+   info 2020-09-21 04:12:25.987    backend   ctrl   4954   4960                   app.backend_session - Requesting stored permissions
+   info 2020-09-21 04:12:25.987    backend   ctrl   4954   4960                      app.clipbrd_comp - Engaging clipboard.
+   info 2020-09-21 04:12:25.987    backend   ctrl   4954   4960                      app.clipbrd_comp - Ready.
+   info 2020-09-21 04:12:25.987    backend   main   4954   4954                       clipbrd.capture - Clipboard capture running.
+   info 2020-09-21 04:12:25.988    backend   ctrl   4954   4960                      audio.pa_wrapper - Connecting to PulseAudio server
+   info 2020-09-21 04:12:25.988    backend     pa   4954   4975                      audio.pa_wrapper - Authorizing on PulseAudio server
+   info 2020-09-21 04:12:25.989    backend     pa   4954   4975                      audio.pa_wrapper - Connection to PulseAudio server established
+   info 2020-09-21 04:12:25.989    backend   ctrl   4954   4960                       audio.pa_stream - Source device has been changed. Switching the capture stream to this device.
+   info 2020-09-21 04:12:25.989    backend   ctrl   4954   4960                       audio.pa_stream - Set playback device: alsa_output.pci-0000_00_1b.0.analog-stereo.
+   info 2020-09-21 04:12:25.990    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 04:12:25.991    backend   ctrl   4954   4960                       audio.pa_stream - Source device has been changed. Switching the capture stream to this device.
+   info 2020-09-21 04:12:25.991    backend   ctrl   4954   4960                       audio.pa_stream - Set source device: alsa_input.pci-0000_00_1b.0.analog-stereo.
+   info 2020-09-21 04:12:25.991    backend   ctrl   4954   4960                      audio.pa_wrapper - Connection to PulseAudio server terminated
+  error 2020-09-21 04:12:25.991    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+  error 2020-09-21 04:12:25.991    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 04:12:25.991    backend   wrk1   4954   4962                   app.backend_session - Recovering stored permissions.
+   info 2020-09-21 04:12:25.991    backend   wrk1   4954   4962                   app.backend_session - Sending input permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.991    backend   wrk1   4954   4962                   app.backend_session - Sending SAS permissions (enabled allowed unsupported)
+  error 2020-09-21 04:12:25.991       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-21 04:12:25.991       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending audio permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending clipboard permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.992    backend   ctrl   4954   4960                   app.backend_session - Session started (ok).
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending block input permissions (allowed supported)
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending file manager permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending lock account permissions (allowed supported)
+   info 2020-09-21 04:12:25.992    backend   wrk1   4954   4962                   app.backend_session - Sending record session permissions (allowed supported)
+   info 2020-09-21 04:12:25.994    backend   wrk1   4954   4962                   app.backend_session - Sending whiteboard permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.994    backend   wrk1   4954   4962                   app.backend_session - Sending TCP tunneling permissions (enabled forbidden supported)
+   info 2020-09-21 04:12:25.997    backend   wrk1   4954   4962                   app.backend_session - Sending privacy permissions (forbidden supported)
+   info 2020-09-21 04:12:25.997    backend   wrk1   4954   4962                   app.backend_session - Sending VPN permissions (enabled allowed supported)
+   info 2020-09-21 04:12:25.003    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: unknown
+   info 2020-09-21 04:12:25.003    backend   wrk1   4954   4962                   app.backend_session - Received new mouse cursor parameters (0).
+   info 2020-09-21 04:12:25.003    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled mouse cursor
+   info 2020-09-21 04:12:25.004    backend   wrk1   4954   4962                   app.backend_session - Received new gui feedback parameters (0).
+   info 2020-09-21 04:12:25.004    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled gui feedback
+   info 2020-09-21 04:12:25.005    backend   wrk1   4954   4962                   app.backend_session - Received new image quality (7).
+   info 2020-09-21 04:12:25.005    backend   wrk1   4954   4962                   app.backend_session - Received new video quality (20).
+   info 2020-09-21 04:12:26.006    backend   wrk1   4954   4962                   app.backend_session - Received new auto-quality preset (2).
+   info 2020-09-21 04:12:26.006    backend   wrk1   4954   4962                   desk_rt.auto_adjust - New preset: 1.
+   info 2020-09-21 04:12:26.006    backend   wrk1   4954   4962                   app.backend_session - Enabling capture.
+   info 2020-09-21 04:12:26.028    backend   wrk0   4954   4961                       desk_rt.encoder - Format changed to 1366x768 (X8R8G8B8).
+   info 2020-09-21 04:12:26.476    backend    x11   4954   4957                          unix_app.xkb - Building charcode translation table.
+   info 2020-09-21 04:12:26.477    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 04:12:27.433    backend   wrk1   4954   4962                   app.backend_session - Received a thumbnail request.
+   info 2020-09-21 04:12:27.576    backend   wrk1   4954   4962                   app.backend_session - Sending a new thumbnail.
+   info 2020-09-21 04:12:28.991    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Forced adjust because of a timeout (0.00 kb/s).
+   info 2020-09-21 04:12:28.991    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Adjusting for < 90 kb/s
+   info 2020-09-21 04:12:28.991    backend   wrk1   4954   4962                    audio.opus_encoder - Bitrate set to 32976 bits/s.
+   info 2020-09-21 04:12:47.354    backend    x11   4954   4957                          unix_app.xkb - Building charcode translation table.
+   info 2020-09-21 04:15:45.883    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (68 b).
+   info 2020-09-21 04:15:45.883    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (33).
+   info 2020-09-21 04:15:45.885    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 04:17:27.773    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (56 b).
+   info 2020-09-21 04:17:27.773    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (27).
+   info 2020-09-21 04:17:27.773    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 04:17:28.063    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (56 b).
+   info 2020-09-21 04:17:28.232    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (56 b).
+   info 2020-09-21 04:17:30.662    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (58 b).
+   info 2020-09-21 04:17:30.662    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (28).
+   info 2020-09-21 04:17:30.663    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 04:17:30.872    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (58 b).
+   info 2020-09-21 04:17:53.582    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (102 b).
+   info 2020-09-21 04:17:53.583    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (50).
+   info 2020-09-21 04:17:53.583    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 04:17:53.738    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (102 b).
+  error 2020-09-21 04:19:32.833    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+   info 2020-09-21 04:19:32.833    backend   wrk1   4954   4962                   app.backend_session - The user has requested a connection quit.
+  error 2020-09-21 04:19:32.833    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 04:19:32.833    backend   wrk0   4954   4961                   app.backend_session - The socket was closed remotely.
+   info 2020-09-21 04:19:32.833    backend   ctrl   4954   4960                   app.backend_session - Stopping session.
+  error 2020-09-21 04:19:32.834       tray   wrk0   1675   1699                    app.tunnel_ft_comp - Invalid session id in cancel operation (123).
+   info 2020-09-21 04:19:32.840    backend   timr   4954   4974          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 04:19:32.840    backend   ctrl   4954   4960                      app.clipbrd_comp - Closing clipboard.
+   info 2020-09-21 04:19:32.840    backend   ctrl   4954   4960                      app.clipbrd_comp - Clearing clipboard.
+   info 2020-09-21 04:19:32.841    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 04:19:32.841    backend   main   4954   4954                       clipbrd.capture - Unregistered clipboard notification.
+   info 2020-09-21 04:19:32.841    backend   ctrl   4954   4960                      app.clipbrd_comp - Clipboard closed.
+   info 2020-09-21 04:19:32.841    backend   ctrl   4954   4960                   app.backend_session - Session stopped.
+   info 2020-09-21 04:19:32.849    backend   ctrl   4954   4960                   app.backend_session - Destroyed.
+   info 2020-09-21 04:19:32.849    backend   ctrl   4954   4960              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-21 04:19:32.849    backend   timr   4954   4971          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 04:19:32.849    backend   ctrl   4954   4960                      unix_app.backend - Session count: 0 (0)
+   info 2020-09-21 07:47:43.900    backend   wrk0   4954   4961                      unix_app.backend - Incoming IPC connection.
+   info 2020-09-21 07:47:43.900    backend   timr   4954  12998          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 07:47:43.900    backend   wrk0   4954   4961                   app.backend_session - Initializing session.
+   info 2020-09-21 07:47:43.900    backend   wrk0   4954   4961                      unix_app.backend - Session count: 1
+   info 2020-09-21 07:47:43.900    backend   ctrl   4954   4960                   app.backend_session - Starting sockets.
+   info 2020-09-21 07:47:43.903    backend   wrk1   4954   4962                   app.backend_session - Incoming session request: neosoft (304887062)
+   info 2020-09-21 07:47:43.903    backend   wrk1   4954   4962                   app.backend_session - Remote caps: sound_src, sound_sink, keyboard_sink, keyboard2, switch_sides, clip_paste_files, clip_src_files, block_input, request_vp_dimensions, keyboard_unicode, sysinfo, remote_restart, volatile_token, filetransfer_server, filetransfer_client, whiteboard, tcp_tunnel, privacy_feature, vpn, encoder_reset, two_factor_auth
+   info 2020-09-21 07:47:43.903    backend   wrk1   4954   4962                   app.backend_session - Remote OS: Linux, Connection flags: direct paid 3 
+   info 2020-09-21 07:47:43.903    backend   wrk1   4954   4962                   app.backend_session - Remote version: 6.0.0
+   info 2020-09-21 07:47:43.903    backend   wrk1   4954   4962                   app.backend_session - Trying to register a new backend session.
+  error 2020-09-21 07:47:43.903       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=24, 0 bytes).
+  error 2020-09-21 07:47:43.903       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 07:47:44.039    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 07:48:35.941    backend   ctrl   4954   4960                   app.backend_session - Starting session (deskrt, clipboard, chat, audio, input, tcp_tunnel).
+   info 2020-09-21 07:48:35.941    backend   timr   4954  13012          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 07:48:35.942    backend   ctrl   4954   4960                       desk_rt.encoder - 4 segments.
+   info 2020-09-21 07:48:36.172    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 07:48:36.172    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 07:48:36.172    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 07:48:36.173    backend   ctrl   4954   4960             desk_rt.capture_component - Starting capture.
+   info 2020-09-21 07:48:36.403    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 07:48:36.404    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 07:48:36.404    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 07:48:36.644    backend   ctrl   4954   4960             desk_rt.capture_component - Sending screen privacy status: off (no change).
+   info 2020-09-21 07:48:36.645    backend   wrk1   4954   4962             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 07:48:36.645    backend   ctrl   4954   4960                   app.keybd_sink_comp - Keyboard layout changed to: en_us
+   info 2020-09-21 07:48:36.645    backend   ctrl   4954   4960                        app.mouse_sink - Starting mouse sink.
+   info 2020-09-21 07:48:36.646    backend   ctrl   4954   4960                   app.backend_session - Requesting stored permissions
+   info 2020-09-21 07:48:36.646    backend   ctrl   4954   4960                      app.clipbrd_comp - Engaging clipboard.
+   info 2020-09-21 07:48:36.646    backend   ctrl   4954   4960                      app.clipbrd_comp - Ready.
+   info 2020-09-21 07:48:36.646    backend   main   4954   4954                       clipbrd.capture - Clipboard capture running.
+   info 2020-09-21 07:48:36.650    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+  error 2020-09-21 07:48:36.650    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+  error 2020-09-21 07:48:36.650    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+  error 2020-09-21 07:48:36.650       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-21 07:48:36.650       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 07:48:36.650    backend   wrk1   4954   4962                   app.backend_session - Recovering stored permissions.
+   info 2020-09-21 07:48:36.650    backend   wrk1   4954   4962                   app.backend_session - Sending input permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.650    backend   wrk1   4954   4962                   app.backend_session - Sending SAS permissions (enabled allowed unsupported)
+   info 2020-09-21 07:48:36.653    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 07:48:36.653    backend   wrk1   4954   4962                   app.backend_session - Sending audio permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.653    backend   wrk1   4954   4962                   app.backend_session - Sending clipboard permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.653    backend   wrk1   4954   4962                   app.backend_session - Sending block input permissions (allowed supported)
+   info 2020-09-21 07:48:36.654    backend   ctrl   4954   4960                   app.backend_session - Session started (ok).
+   info 2020-09-21 07:48:36.654    backend   wrk1   4954   4962                   app.backend_session - Sending file manager permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.654    backend   wrk1   4954   4962                   app.backend_session - Sending lock account permissions (allowed supported)
+   info 2020-09-21 07:48:36.654    backend   wrk1   4954   4962                   app.backend_session - Sending record session permissions (allowed supported)
+   info 2020-09-21 07:48:36.655    backend   wrk1   4954   4962                   app.backend_session - Sending whiteboard permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.655    backend   wrk1   4954   4962                   app.backend_session - Sending TCP tunneling permissions (enabled forbidden supported)
+   info 2020-09-21 07:48:36.659    backend   wrk1   4954   4962                   app.backend_session - Sending privacy permissions (forbidden supported)
+   info 2020-09-21 07:48:36.659    backend   wrk1   4954   4962                   app.backend_session - Sending VPN permissions (enabled allowed supported)
+   info 2020-09-21 07:48:36.755    backend   wrk1   4954   4962                   app.backend_session - Received new mouse cursor parameters (0).
+   info 2020-09-21 07:48:36.755    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled mouse cursor
+   info 2020-09-21 07:48:36.756    backend   wrk1   4954   4962                   app.backend_session - Received new gui feedback parameters (0).
+   info 2020-09-21 07:48:36.756    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled gui feedback
+   info 2020-09-21 07:48:36.757    backend   wrk1   4954   4962                   app.backend_session - Received new image quality (7).
+   info 2020-09-21 07:48:36.759    backend   wrk1   4954   4962                   app.backend_session - Received new video quality (20).
+   info 2020-09-21 07:48:36.760    backend   wrk1   4954   4962                   app.backend_session - Received new auto-quality preset (2).
+   info 2020-09-21 07:48:36.760    backend   wrk1   4954   4962                   desk_rt.auto_adjust - New preset: 1.
+   info 2020-09-21 07:48:36.761    backend   wrk1   4954   4962                   app.backend_session - Enabling capture.
+   info 2020-09-21 07:48:36.773    backend   wrk0   4954   4961                       desk_rt.encoder - Format changed to 1366x768 (X8R8G8B8).
+   info 2020-09-21 07:48:39.650    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Forced adjust because of a timeout (0.00 kb/s).
+   info 2020-09-21 07:48:39.651    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Adjusting for < 90 kb/s
+   info 2020-09-21 07:48:39.651    backend   wrk1   4954   4962                    audio.opus_encoder - Bitrate set to 32976 bits/s.
+   info 2020-09-21 07:48:40.668    backend   wrk1   4954   4962                   app.backend_session - Received a thumbnail request.
+   info 2020-09-21 07:48:40.802    backend   wrk1   4954   4962                   app.backend_session - The current thumbnail is already up-to-date.
+   info 2020-09-21 07:51:27.697    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (24 b).
+   info 2020-09-21 07:51:27.697    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (11).
+   info 2020-09-21 07:51:27.698    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 07:51:28.653    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (24 b).
+   info 2020-09-21 07:52:33.765    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (32 b).
+   info 2020-09-21 07:52:33.765    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (15).
+   info 2020-09-21 07:52:33.768    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 07:52:33.001    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (32 b).
+   info 2020-09-21 07:53:47.211    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (56 b).
+   info 2020-09-21 07:53:47.211    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (27).
+   info 2020-09-21 07:53:47.212    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 07:53:47.406    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (56 b).
+   info 2020-09-21 07:54:09.710    backend   wrk2   4954   4963                      app.clipbrd_comp - Got a text offer (60 b).
+   info 2020-09-21 07:54:09.710    backend   main   4954   4954                          clipbrd.sink - Putting text data on the clipboard (29).
+   info 2020-09-21 07:54:09.710    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 07:54:09.819    backend   wrk1   4954   4962                      app.clipbrd_comp - Got a text offer (60 b).
+  error 2020-09-21 07:55:46.545    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+   info 2020-09-21 07:55:46.545    backend   wrk1   4954   4962                   app.backend_session - The user has requested a connection quit.
+  error 2020-09-21 07:55:46.545    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 07:55:46.545    backend   ctrl   4954   4960                   app.backend_session - Stopping session.
+   info 2020-09-21 07:55:46.545    backend   wrk0   4954   4961                   app.backend_session - The socket was closed remotely.
+  error 2020-09-21 07:55:46.546       tray   wrk0   1675   1699                    app.tunnel_ft_comp - Invalid session id in cancel operation (131).
+   info 2020-09-21 07:55:46.551    backend   timr   4954  13012          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 07:55:46.552    backend   ctrl   4954   4960                      app.clipbrd_comp - Closing clipboard.
+   info 2020-09-21 07:55:46.552    backend   ctrl   4954   4960                      app.clipbrd_comp - Clearing clipboard.
+   info 2020-09-21 07:55:46.552    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 07:55:46.552    backend   main   4954   4954                       clipbrd.capture - Unregistered clipboard notification.
+   info 2020-09-21 07:55:46.552    backend   ctrl   4954   4960                      app.clipbrd_comp - Clipboard closed.
+   info 2020-09-21 07:55:46.552    backend   ctrl   4954   4960                   app.backend_session - Session stopped.
+   info 2020-09-21 07:55:48.330    backend   ctrl   4954   4960                   app.backend_session - Destroyed.
+   info 2020-09-21 07:55:48.331    backend   ctrl   4954   4960              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-21 07:55:48.331    backend   timr   4954  12998          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 07:55:48.331    backend   ctrl   4954   4960                      unix_app.backend - Session count: 0 (0)
+   info 2020-09-21 09:50:06.070    backend   wrk0   4954   4961                      unix_app.backend - Incoming IPC connection.
+   info 2020-09-21 09:50:06.070    backend   timr   4954  14553          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 09:50:06.070    backend   wrk0   4954   4961                   app.backend_session - Initializing session.
+   info 2020-09-21 09:50:06.071    backend   wrk0   4954   4961                      unix_app.backend - Session count: 1
+   info 2020-09-21 09:50:06.071    backend   ctrl   4954   4960                   app.backend_session - Starting sockets.
+  error 2020-09-21 09:50:06.073       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=24, 0 bytes).
+  error 2020-09-21 09:50:06.073       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 09:50:06.073    backend   wrk1   4954   4962                   app.backend_session - Incoming session request: neosoft (304887062)
+   info 2020-09-21 09:50:06.073    backend   wrk1   4954   4962                   app.backend_session - Remote caps: sound_src, sound_sink, keyboard_sink, keyboard2, switch_sides, clip_paste_files, clip_src_files, block_input, request_vp_dimensions, keyboard_unicode, sysinfo, remote_restart, volatile_token, filetransfer_server, filetransfer_client, whiteboard, tcp_tunnel, privacy_feature, vpn, encoder_reset, two_factor_auth
+   info 2020-09-21 09:50:06.073    backend   wrk1   4954   4962                   app.backend_session - Remote OS: Linux, Connection flags: direct paid 3 
+   info 2020-09-21 09:50:06.073    backend   wrk1   4954   4962                   app.backend_session - Remote version: 6.0.0
+   info 2020-09-21 09:50:06.073    backend   wrk1   4954   4962                   app.backend_session - Trying to register a new backend session.
+   info 2020-09-21 09:50:06.088    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 09:50:12.915    backend   ctrl   4954   4960                   app.backend_session - Starting session (deskrt, clipboard, chat, audio, input, tcp_tunnel).
+   info 2020-09-21 09:50:12.916    backend   ctrl   4954   4960                       desk_rt.encoder - 4 segments.
+   info 2020-09-21 09:50:12.916    backend   timr   4954  14555          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 09:50:13.144    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 09:50:13.144    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 09:50:13.144    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 09:50:13.145    backend   ctrl   4954   4960             desk_rt.capture_component - Starting capture.
+   info 2020-09-21 09:50:13.381    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 09:50:13.381    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 09:50:13.381    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 09:50:13.383    backend   ctrl   4954   4960             desk_rt.capture_component - Sending screen privacy status: off (no change).
+   info 2020-09-21 09:50:13.384    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 09:50:13.384    backend   ctrl   4954   4960                   app.keybd_sink_comp - Keyboard layout changed to: en_us
+   info 2020-09-21 09:50:13.384    backend   ctrl   4954   4960                        app.mouse_sink - Starting mouse sink.
+   info 2020-09-21 09:50:13.385    backend   ctrl   4954   4960                   app.backend_session - Requesting stored permissions
+   info 2020-09-21 09:50:13.385    backend   ctrl   4954   4960                      app.clipbrd_comp - Engaging clipboard.
+   info 2020-09-21 09:50:13.385    backend   ctrl   4954   4960                      app.clipbrd_comp - Ready.
+   info 2020-09-21 09:50:13.385    backend   main   4954   4954                       clipbrd.capture - Clipboard capture running.
+   info 2020-09-21 09:50:13.385    backend   ctrl   4954   4960                   app.backend_session - Session started (ok).
+   info 2020-09-21 09:50:13.390    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+  error 2020-09-21 09:50:13.390       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-21 09:50:13.390       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+  error 2020-09-21 09:50:13.391    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+  error 2020-09-21 09:50:13.391    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Recovering stored permissions.
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Sending input permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Sending SAS permissions (enabled allowed unsupported)
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Sending audio permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Sending clipboard permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.391    backend   wrk1   4954   4962                   app.backend_session - Sending block input permissions (allowed supported)
+   info 2020-09-21 09:50:13.392    backend   wrk1   4954   4962                   app.backend_session - Sending file manager permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.392    backend   wrk1   4954   4962                   app.backend_session - Sending lock account permissions (allowed supported)
+   info 2020-09-21 09:50:13.392    backend   wrk1   4954   4962                   app.backend_session - Sending record session permissions (allowed supported)
+   info 2020-09-21 09:50:13.620    backend   wrk1   4954   4962                   app.backend_session - Sending whiteboard permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.621    backend   wrk1   4954   4962                   app.backend_session - Sending TCP tunneling permissions (enabled forbidden supported)
+   info 2020-09-21 09:50:13.621    backend   wrk1   4954   4962                   app.backend_session - Sending privacy permissions (forbidden supported)
+   info 2020-09-21 09:50:13.621    backend   wrk1   4954   4962                   app.backend_session - Sending VPN permissions (enabled allowed supported)
+   info 2020-09-21 09:50:13.630    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 09:50:13.630    backend   wrk1   4954   4962                   app.backend_session - Received new mouse cursor parameters (0).
+   info 2020-09-21 09:50:13.630    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled mouse cursor
+   info 2020-09-21 09:50:13.635    backend   wrk1   4954   4962                   app.backend_session - Received new gui feedback parameters (0).
+   info 2020-09-21 09:50:13.635    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled gui feedback
+   info 2020-09-21 09:50:13.637    backend   wrk1   4954   4962                   app.backend_session - Received new image quality (7).
+   info 2020-09-21 09:50:13.639    backend   wrk1   4954   4962                   app.backend_session - Received new video quality (20).
+   info 2020-09-21 09:50:13.640    backend   wrk1   4954   4962                   app.backend_session - Received new auto-quality preset (2).
+   info 2020-09-21 09:50:13.640    backend   wrk1   4954   4962                   desk_rt.auto_adjust - New preset: 1.
+   info 2020-09-21 09:50:13.641    backend   wrk1   4954   4962                   app.backend_session - Enabling capture.
+   info 2020-09-21 09:50:13.655    backend   wrk0   4954   4961                       desk_rt.encoder - Format changed to 1366x768 (X8R8G8B8).
+   info 2020-09-21 09:50:16.391    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Forced adjust because of a timeout (0.00 kb/s).
+   info 2020-09-21 09:50:16.392    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Adjusting for < 90 kb/s
+   info 2020-09-21 09:50:16.392    backend   wrk1   4954   4962                    audio.opus_encoder - Bitrate set to 32976 bits/s.
+   info 2020-09-21 09:50:21.932    backend   wrk1   4954   4962                   app.backend_session - Received a thumbnail request.
+   info 2020-09-21 09:50:22.056    backend   wrk1   4954   4962                   app.backend_session - The current thumbnail is already up-to-date.
+  error 2020-09-21 09:56:16.957    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+   info 2020-09-21 09:56:16.957    backend   wrk1   4954   4962                   app.backend_session - The user has requested a connection quit.
+  error 2020-09-21 09:56:16.957    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 09:56:16.957    backend   wrk0   4954   4961                   app.backend_session - The socket was closed remotely.
+   info 2020-09-21 09:56:16.957    backend   ctrl   4954   4960                   app.backend_session - Stopping session.
+  error 2020-09-21 09:56:16.958       tray   wrk0   1675   1699                    app.tunnel_ft_comp - Invalid session id in cancel operation (140).
+   info 2020-09-21 09:56:16.962    backend   timr   4954  14555          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 09:56:16.962    backend   ctrl   4954   4960                      app.clipbrd_comp - Closing clipboard.
+   info 2020-09-21 09:56:16.962    backend   ctrl   4954   4960                      app.clipbrd_comp - Clearing clipboard.
+   info 2020-09-21 09:56:16.963    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 09:56:16.963    backend   main   4954   4954                       clipbrd.capture - Unregistered clipboard notification.
+   info 2020-09-21 09:56:16.963    backend   ctrl   4954   4960                      app.clipbrd_comp - Clipboard closed.
+   info 2020-09-21 09:56:16.963    backend   ctrl   4954   4960                   app.backend_session - Session stopped.
+   info 2020-09-21 09:56:16.969    backend   ctrl   4954   4960                   app.backend_session - Destroyed.
+   info 2020-09-21 09:56:16.969    backend   ctrl   4954   4960              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-21 09:56:16.969    backend   timr   4954  14553          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 09:56:16.969    backend   ctrl   4954   4960                      unix_app.backend - Session count: 0 (0)
+   info 2020-09-21 13:28:42.401    backend   wrk0   4954   4961                      unix_app.backend - Incoming IPC connection.
+   info 2020-09-21 13:28:42.401    backend   timr   4954  17863          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 13:28:42.401    backend   wrk0   4954   4961                   app.backend_session - Initializing session.
+   info 2020-09-21 13:28:42.401    backend   wrk0   4954   4961                      unix_app.backend - Session count: 1
+   info 2020-09-21 13:28:42.401    backend   ctrl   4954   4960                   app.backend_session - Starting sockets.
+  error 2020-09-21 13:28:42.404       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=24, 0 bytes).
+  error 2020-09-21 13:28:42.404       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 13:28:42.404    backend   wrk1   4954   4962                   app.backend_session - Incoming session request: KHAN (desktop-sbl2onh@ad)
+   info 2020-09-21 13:28:42.404    backend   wrk1   4954   4962                   app.backend_session - Remote caps: sound_src, sound_sink, keyboard_sink, keyboard2, switch_sides, clip_paste_files, clip_src_files, send_sas, block_input, request_vp_dimensions, keyboard_unicode, sysinfo, remote_restart, volatile_token, keyb_hint_src, filetransfer_server, filetransfer_client, remote_printing, whiteboard, tcp_tunnel, privacy_feature, encoder_reset, two_factor_auth, reverse_remote_printing, force_remote_restart
+   info 2020-09-21 13:28:42.404    backend   wrk1   4954   4962                   app.backend_session - Remote OS: Windows, Connection flags: direct paid 3 
+   info 2020-09-21 13:28:42.404    backend   wrk1   4954   4962                   app.backend_session - Remote version: 6.0.8
+   info 2020-09-21 13:28:42.404    backend   wrk1   4954   4962                   app.backend_session - Trying to register a new backend session.
+   info 2020-09-21 13:28:42.426    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 13:28:59.075    backend   ctrl   4954   4960                   app.backend_session - Starting session (deskrt, clipboard, chat, audio, input, tcp_tunnel).
+   info 2020-09-21 13:28:59.075    backend   timr   4954  17866          base.signal.local.timer_impl - Initialized master timer.
+   info 2020-09-21 13:28:59.076    backend   ctrl   4954   4960                       desk_rt.encoder - 4 segments.
+   info 2020-09-21 13:28:59.304    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 13:28:59.304    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 13:28:59.304    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 13:28:59.306    backend   ctrl   4954   4960             desk_rt.capture_component - Starting capture.
+   info 2020-09-21 13:28:59.546    backend    x11   4954   4957                     base.monitor_info - Monitor 0: x/y : 0/0
+   info 2020-09-21 13:28:59.546    backend    x11   4954   4957                     base.monitor_info - Monitor 0: w/h : 1366/768
+   info 2020-09-21 13:28:59.546    backend    x11   4954   4957                     base.monitor_info - Monitor 0 output=66
+   info 2020-09-21 13:28:59.549    backend   ctrl   4954   4960             desk_rt.capture_component - Sending screen privacy status: off (no change).
+   info 2020-09-21 13:28:59.788    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+   info 2020-09-21 13:28:59.788    backend   ctrl   4954   4960                   app.keybd_sink_comp - Keyboard layout changed to: en_us
+   info 2020-09-21 13:28:59.788    backend   ctrl   4954   4960                        app.mouse_sink - Starting mouse sink.
+   info 2020-09-21 13:28:59.789    backend   ctrl   4954   4960                   app.backend_session - Requesting stored permissions
+   info 2020-09-21 13:28:59.789    backend   ctrl   4954   4960                      app.clipbrd_comp - Engaging clipboard.
+   info 2020-09-21 13:28:59.789    backend   ctrl   4954   4960                      app.clipbrd_comp - Ready.
+   info 2020-09-21 13:28:59.790    backend   main   4954   4954                       clipbrd.capture - Clipboard capture running.
+   info 2020-09-21 13:28:59.791    backend   ctrl   4954   4960                   app.backend_session - Session started (ok).
+  error 2020-09-21 13:28:59.801       tray   wrk0   1675   1699              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-21 13:28:59.801       tray   wrk0   1675   1699                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 13:28:59.802    backend   wrk0   4954   4961             desk_rt.capture_component - Keyboard layout changed to: en_us
+  error 2020-09-21 13:28:59.802    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+  error 2020-09-21 13:28:59.802    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Route type: tunnel (internet)
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Received new mouse cursor parameters (0).
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled mouse cursor
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Sending input permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Sending SAS permissions (enabled allowed unsupported)
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Sending audio permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Sending clipboard permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.803    backend   wrk1   4954   4962                   app.backend_session - Sending block input permissions (allowed supported)
+   info 2020-09-21 13:28:59.804    backend   wrk1   4954   4962                   app.backend_session - Sending file manager permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.804    backend   wrk1   4954   4962                   app.backend_session - Sending lock account permissions (allowed supported)
+   info 2020-09-21 13:28:59.804    backend   wrk1   4954   4962                   app.backend_session - Sending record session permissions (allowed supported)
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962                   app.backend_session - Sending whiteboard permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962                   app.backend_session - Sending TCP tunneling permissions (enabled forbidden supported)
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962                   app.backend_session - Sending privacy permissions (forbidden supported)
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962                   app.backend_session - Sending VPN permissions (enabled allowed supported)
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962                   app.backend_session - Received new gui feedback parameters (0).
+   info 2020-09-21 13:28:59.805    backend   wrk1   4954   4962           desk_rt.system_event_source - Disabled gui feedback
+   info 2020-09-21 13:28:59.807    backend   wrk1   4954   4962                   app.backend_session - Received new image quality (7).
+   info 2020-09-21 13:28:59.808    backend   wrk1   4954   4962                   app.backend_session - Received new video quality (20).
+   info 2020-09-21 13:28:59.809    backend   wrk1   4954   4962                   app.backend_session - Received new auto-quality preset (2).
+   info 2020-09-21 13:28:59.809    backend   wrk1   4954   4962                   desk_rt.auto_adjust - New preset: 1.
+   info 2020-09-21 13:28:59.812    backend   wrk1   4954   4962                   app.backend_session - Enabling capture.
+   info 2020-09-21 13:28:59.815    backend   wrk1   4954   4962                   app.backend_session - Recovering stored permissions.
+   info 2020-09-21 13:28:59.816    backend   wrk0   4954   4961                       desk_rt.encoder - Format changed to 1366x768 (X8R8G8B8).
+   info 2020-09-21 13:29:01.036    backend   wrk2   4954   4963                   app.backend_session - Received a thumbnail request.
+   info 2020-09-21 13:29:01.167    backend   wrk2   4954   4963                   app.backend_session - Sending a new thumbnail.
+   info 2020-09-21 13:29:02.802    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Forced adjust because of a timeout (0.00 kb/s).
+   info 2020-09-21 13:29:02.802    backend   wrk1   4954   4962                   desk_rt.auto_adjust - Adjusting for < 90 kb/s
+   info 2020-09-21 13:29:02.802    backend   wrk1   4954   4962                    audio.opus_encoder - Bitrate set to 32976 bits/s.
+   info 2020-09-21 13:32:24.607    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:32:24.616    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+   info 2020-09-21 13:32:34.504    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:32:34.505    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+   info 2020-09-21 13:32:54.767    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:32:54.770    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+   info 2020-09-21 13:40:52.714    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:40:52.716    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+   info 2020-09-21 13:40:52.941    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:40:52.942    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+   info 2020-09-21 13:42:46.046    backend   main   4954   4954                       clipbrd.capture - Clipboard changed.
+   info 2020-09-21 13:42:46.046    backend   main   4954   4954                       clipbrd.capture - Requesting utf8 text.
+  error 2020-09-21 13:49:09.162    backend   wrk0   4954   4961              base.prot.packet_factory - Invalid packet received (type=78, 2 bytes).
+  error 2020-09-21 13:49:09.163    backend   wrk0   4954   4961                        hub_ipc_socket - IPC packet deserialization failed.
+   info 2020-09-21 13:49:09.163    backend   wrk1   4954   4962                   app.backend_session - The user has requested a connection quit.
+   info 2020-09-21 13:49:09.163    backend   wrk0   4954   4961                   app.backend_session - The socket was closed remotely.
+   info 2020-09-21 13:49:09.164    backend   ctrl   4954   4960                   app.backend_session - Stopping session.
+  error 2020-09-21 13:49:09.168       tray   wrk0   1675   1699                    app.tunnel_ft_comp - Invalid session id in cancel operation (157).
+   info 2020-09-21 13:49:09.170    backend   timr   4954  17866          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 13:49:09.170    backend   ctrl   4954   4960                      app.clipbrd_comp - Closing clipboard.
+   info 2020-09-21 13:49:09.170    backend   ctrl   4954   4960                      app.clipbrd_comp - Clearing clipboard.
+   info 2020-09-21 13:49:09.173    backend   main   4954   4954                       clipbrd.capture - Ignoring own data.
+   info 2020-09-21 13:49:09.173    backend   main   4954   4954                       clipbrd.capture - Unregistered clipboard notification.
+   info 2020-09-21 13:49:09.174    backend   ctrl   4954   4960                      app.clipbrd_comp - Clipboard closed.
+   info 2020-09-21 13:49:09.174    backend   ctrl   4954   4960                   app.backend_session - Session stopped.
+   info 2020-09-21 13:49:09.177    backend   ctrl   4954   4960                   app.backend_session - Destroyed.
+   info 2020-09-21 13:49:09.178    backend   ctrl   4954   4960              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-21 13:49:09.178    backend   timr   4954  17863          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 13:49:09.178    backend   ctrl   4954   4960                      unix_app.backend - Session count: 0 (0)
+   info 2020-09-21 14:24:07.300   frontend   ctrl   4461   4471                     unix_app.frontend - Frontend shutdown.
+   info 2020-09-21 14:24:07.745   frontend   ctrl   4461   4471                       base.signal.hub - Control quit.
+   info 2020-09-21 14:24:07.746   frontend   timr   4461   4467          base.signal.local.timer_impl - Timer wants to quit.
+   info 2020-09-21 14:24:07.753   frontend   main   4461   4461              base.prot.job_dispatcher - 0 undelivered packets.
+   info 2020-09-21 14:24:07.754   frontend   main   4461   4461                                  main - Exiting normally.
+  error 2020-09-21 14:24:34.654    backend   wrk0   4954   4961                      unix_app.backend - Service connection lost.
+   info 2020-09-21 14:24:34.656    backend   ctrl   4954   4960                      unix_app.backend - Backend is shutting down.
+warning 2020-09-21 14:24:34.695    backend     pa   4954   4959                      audio.pa_wrapper - Connection to PulseAudio server failed
+   info 2020-09-22 04:26:49.329         ad   main   1684   1684                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-22 04:26:49.329         ad   main   1684   1684                                  main - * AnyDesk Linux Startup *
+   info 2020-09-22 04:26:49.329         ad   main   1684   1684                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-22 04:26:49.329         ad   main   1684   1684                                  main - * Build 20200824175011
+   info 2020-09-22 04:26:49.330         ad   main   1684   1684                                  main - * Prefix ad
+   info 2020-09-22 04:26:49.330         ad   main   1684   1684                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-22 04:26:49.330         ad   main   1684   1684                                  main - 
+   info 2020-09-22 04:26:49.330         ad   main   1684   1684                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-22 04:26:49.330         ad   main   1684   1684                                  main - Found GLib Version: 2.56.
+   info 2020-09-22 04:26:49.385         ad   main   1684   1684                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-22 04:26:49.385         ad   main   1684   1684                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-22 04:26:49.389       tray   main   1684   1684                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-22 04:26:49.389       tray   main   1684   1684                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-22 04:26:49.412       tray   main   1684   1684                       base.signal.hub - 1 threads.
+   info 2020-09-22 04:26:49.412       tray   main   1684   1684                    app.tunnel_ft_comp - Ready.
+   info 2020-09-22 04:26:49.495       tray   ctrl   1684   1705                      unix_app.control - Control startup.
+  error 2020-09-22 04:26:49.497       tray   ctrl   1684   1705              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-22 04:26:49.518       tray   wrk0   1684   1707              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-22 04:26:49.518       tray   wrk0   1684   1707                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-22 04:26:49.523       tray   wrk0   1684   1707                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).
+   info 2020-09-22 15:18:39.887         ad   main   1793   1793                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - * AnyDesk Linux Startup *
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - * Build 20200824175011
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - * Prefix ad
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - 
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-22 15:18:39.888         ad   main   1793   1793                                  main - Found GLib Version: 2.56.
+   info 2020-09-22 15:18:39.938         ad   main   1793   1793                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-22 15:18:39.938         ad   main   1793   1793                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-22 15:18:39.943       tray   main   1793   1793                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-22 15:18:39.943       tray   main   1793   1793                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-22 15:18:39.971       tray   main   1793   1793                       base.signal.hub - 1 threads.
+   info 2020-09-22 15:18:39.972       tray   main   1793   1793                    app.tunnel_ft_comp - Ready.
+   info 2020-09-22 15:18:40.037       tray   ctrl   1793   1808                      unix_app.control - Control startup.
+  error 2020-09-22 15:18:40.041       tray   ctrl   1793   1808              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-22 15:18:40.052       tray   wrk0   1793   1811              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-22 15:18:40.052       tray   wrk0   1793   1811                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-22 15:18:40.053       tray   wrk0   1793   1811                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - * AnyDesk Linux Startup *
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - * Build 20200824175011
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - * Prefix ad
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - 
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-23 04:28:38.853         ad   main   1750   1750                                  main - Found GLib Version: 2.56.
+   info 2020-09-23 04:28:38.900         ad   main   1750   1750                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-23 04:28:38.900         ad   main   1750   1750                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-23 04:28:38.902       tray   main   1750   1750                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-23 04:28:38.902       tray   main   1750   1750                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-23 04:28:38.924       tray   main   1750   1750                       base.signal.hub - 1 threads.
+   info 2020-09-23 04:28:38.924       tray   main   1750   1750                    app.tunnel_ft_comp - Ready.
+   info 2020-09-23 04:28:38.986       tray   ctrl   1750   1789                      unix_app.control - Control startup.
+  error 2020-09-23 04:28:38.987       tray   ctrl   1750   1789              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-23 04:28:39.012       tray   wrk0   1750   1790              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-23 04:28:39.012       tray   wrk0   1750   1790                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-23 04:28:39.013       tray   wrk0   1750   1790                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).
+   info 2020-09-23 12:09:56.735         ad   main   1731   1731                         impl_selector - using avx2
+ * * * * * * * * * * * * * * * * * *
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - * AnyDesk Linux Startup *
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - * Version 6.0.1 (linux_release_6.0.1 ce4f5badb2839d0e36a167da46f34596f2e89093)
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - * Build 20200824175011
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - * Prefix ad
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - * Copyright (C) 2017 philandro Software GmbH *
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - 
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - Distribution Info: Ubuntu 18.04.5 LTS
+   info 2020-09-23 12:09:56.736         ad   main   1731   1731                                  main - Found GLib Version: 2.56.
+   info 2020-09-23 12:09:56.794         ad   main   1731   1731                       app.common_path - user_data_dir = /home/webwerks/.anydesk, logged_in_user_data_dir = /home/webwerks/.anydesk, current_home = /home/webwerks
+
+   info 2020-09-23 12:09:56.794         ad   main   1731   1731                       app.common_path - initialized user = /home/webwerks/.anydesk, system = /etc/anydesk
+   info 2020-09-23 12:09:56.798       tray   main   1731   1731                           gui.gui_app - DPI scaling: 1.00 / 1.00
+   info 2020-09-23 12:09:56.798       tray   main   1731   1731                           gui.gui_app - Using std-resolution bitmaps.
+   info 2020-09-23 12:09:56.822       tray   main   1731   1731                       base.signal.hub - 1 threads.
+   info 2020-09-23 12:09:56.822       tray   main   1731   1731                    app.tunnel_ft_comp - Ready.
+   info 2020-09-23 12:09:56.864       tray   ctrl   1731   1759                      unix_app.control - Control startup.
+  error 2020-09-23 12:09:56.865       tray   ctrl   1731   1759              base.signal.global.event - Cannot set the subsignal count to a smaller or equal value.
+  error 2020-09-23 12:09:56.884       tray   wrk0   1731   1760              base.prot.packet_factory - Invalid packet received (type=26, 4 bytes).
+  error 2020-09-23 12:09:56.884       tray   wrk0   1731   1760                        hub_ipc_socket - IPC packet deserialization failed.
+warning 2020-09-23 12:09:56.885       tray   wrk0   1731   1760                      unix_app.control - Could not update account image (File not found: /home/webwerks/.face.icon).

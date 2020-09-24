@@ -1,0 +1,1104 @@
+/**
+ * Yii JavaScript module.
+ *
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+
+/**
+ * yii is the root module for all Yii JavaScript modules.
+ * It implements a mechanism of organizing JavaScript code in modules through the function "yii.initModule()".
+ *
+ * Each module should be named as "x.y.z", where "x" stands for the root module (for the Yii core code, this is "yii").
+ *
+ * A module may be structured as follows:
+ *
+ * ```javascript
+ * window.yii.sample = (function($) {
+ *     var pub = {
+ *         // whether this module is currently active. If false, init() will not be called for this module
+ *         // it will also not be called for all its child modules. If this property is undefined, it means true.
+ *         isActive: true,
+ *         init: function() {
+ *             // ... module initialization code goes here ...
+ *         },
+ *
+ *         // ... other public functions and properties go here ...
+ *     };
+ *
+ *     // ... private functions and properties go here ...
+ *
+ *     return pub;
+ * })(window.jQuery);
+ * ```
+ *
+ * Using this structure, you can define public and private functions/properties for a module.
+ * Private functions/properties are only visible within the module, while public functions/properties
+ * may be accessed outside of the module. For example, you can access "yii.sample.isActive".
+ *
+ * You must call "yii.initModule()" once for the root module of all your modules.
+ */
+window.yii = (function ($) {
+    var pub = {
+        /**
+         * List of JS or CSS URLs that can be loaded multiple times via AJAX requests.
+         * Each item may be represented as either an absolute URL or a relative one.
+         * Each item may contain a wildcard matching character `*`, that means one or more
+         * any characters on the position. For example:
+         *  - `/css/*.css` will match any file ending with `.css` in the `css` directory of the current web site
+         *  - `http*://cdn.example.com/*` will match any files on domain `cdn.example.com`, loaded with HTTP or HTTPS
+         *  - `/js/myCustomScript.js?realm=*` will match file `/js/myCustomScript.js` with defined `realm` parameter
+         */
+        reloadableScripts: [],
+        /**
+         * The selector for clickable elements that need to support confirmation and form submission.
+         */
+        clickableSelector: 'a, button, input[type="submit"], input[type="button"], input[type="reset"], ' +
+            'input[type="image"]',
+        /**
+         * The selector for changeable elements that need to support confirmation and form submission.
+         */
+        changeableSelector: 'select, input, textarea',
+
+        /**
+         * @return string|undefined the CSRF parameter name. Undefined is returned if CSRF validation is not enabled.
+         */
+        getCsrfParam: function () {
+            return $('meta[name=csrf-param]').attr('content');
+        },
+
+        /**
+         * @return string|undefined the CSRF token. Undefined is returned if CSRF validation is not enabled.
+         */
+        getCsrfToken: function () {
+            return $('meta[name=csrf-token]').attr('content');
+        },
+
+        /**
+         * Sets the CSRF token in the meta elements.
+         * This method is provided so that you can update the CSRF token with the latest one you obtain from the server.
+         * @param name the CSRF token name
+         * @param value the CSRF token value
+         */
+        setCsrfToken: function (name, value) {
+            $('meta[name=csrf-param]').attr('content', name);
+            $('meta[name=csrf-token]').attr('content', value);
+        },
+
+        /**
+         * Updates all form CSRF input fields with the latest CSRF token.
+         * This method is provided to avoid cached forms containing outdated CSRF tokens.
+         */
+        refreshCsrfToken: function () {
+            var token = pub.getCsrfToken();
+            if (token) {
+                $('form input[name="' + pub.getCsrfParam() + '"]').val(token);
+            }
+        },
+
+        /**
+         * Displays a confirmation dialog.
+         * The default implementation simply displays a js confirmation dialog.
+         * You may override this by setting `yii.confirm`.
+         * @param message the confirmation message.
+         * @param ok a callback to be called when the user confirms the message
+         * @param cancel a callback to be called when the user cancels the confirmation
+         */
+        confirm: function (message, ok, cancel) {
+            if (window.confirm(message)) {
+                !ok || ok();
+            } else {
+                !cancel || cancel();
+            }
+        },
+
+        /**
+         * Handles the action triggered by user.
+         * This method recognizes the `data-method` attribute of the element. If the attribute exists,
+         * the method will submit the form containing this element. If there is no containing form, a form
+         * will be created and submitted using the method given by this attribute value (e.g. "post", "put").
+         * For hyperlinks, the form action will take the value of the "href" attribute of the link.
+         * For other elements, either the containing form action or the current page URL will be used
+         * as the form action URL.
+         *
+         * If the `data-method` attribute is not defined, the `href` attribute (if any) of the element
+         * will be assigned to `window.location`.
+         *
+         * Starting from version 2.0.3, the `data-params` attribute is also recognized when you specify
+         * `data-method`. The value of `data-params` should be a JSON representation of the data (name-value pairs)
+         * that should be submitted as hidden inputs. For example, you may use the following code to generate
+         * such a link:
+         *
+         * ```php
+         * use yii\helpers\Html;
+         * use yii\helpers\Json;
+         *
+         * echo Html::a('submit', ['site/foobar'], [
+         *     'data' => [
+         *         'method' => 'post',
+         *         'params' => [
+         *             'name1' => 'value1',
+         *             'name2' => 'value2',
+         *         ],
+         *     ],
+         * ]);
+         * ```
+         *
+         * @param $e the jQuery representation of the element
+         * @param event Related event
+         */
+        handleAction: function ($e, event) {
+            var $form = $e.attr('data-form') ? $('#' + $e.attr('data-form')) : $e.closest('form'),
+                method = !$e.data('method') && $form ? $form.attr('method') : $e.data('method'),
+                action = $e.attr('href'),
+                isValidAction = action && action !== '#',
+                params = $e.data('params'),
+                areValidParams = params && $.isPlainObject(params),
+                pjax = $e.data('pjax'),
+                usePjax = pjax !== undefined && pjax !== 0 && $.support.pjax,
+                pjaxContainer,
+                pjaxOptions = {},
+                conflictParams = ['submit', 'reset', 'elements', 'length', 'name', 'acceptCharset',
+                    'action', 'enctype', 'method', 'target'];
+
+            // Forms and their child elements should not use input names or ids that conflict with properties of a form,
+            // such as submit, length, or method.
+            $.each(conflictParams, function (index, param) {
+                if (areValidParams && params.hasOwnProperty(param)) {
+                    console.error("Parameter name '" + param + "' conflicts with a same named form property. " +
+                        "Please use another name.");
+                }
+            });
+
+            if (usePjax) {
+                pjaxContainer = $e.data('pjax-container');
+                if (pjaxContainer === undefined || !pjaxContainer.length) {
+                    pjaxContainer = $e.closest('[data-pjax-container]').attr('id')
+                        ? ('#' + $e.closest('[data-pjax-container]').attr('id'))
+                        : '';
+                }
+                if (!pjaxContainer.length) {
+                    pjaxContainer = 'body';
+                }
+                pjaxOptions = {
+                    container: pjaxContainer,
+                    push: !!$e.data('pjax-push-state'),
+                    replace: !!$e.data('pjax-replace-state'),
+                    scrollTo: $e.data('pjax-scrollto'),
+                    pushRedirect: $e.data('pjax-push-redirect'),
+                    replaceRedirect: $e.data('pjax-replace-redirect'),
+                    skipOuterContainers: $e.data('pjax-skip-outer-containers'),
+                    timeout: $e.data('pjax-timeout'),
+                    originalEvent: event,
+                    originalTarget: $e
+                };
+            }
+
+            if (method === undefined) {
+                if (isValidAction) {
+                    usePjax ? $.pjax.click(event, pjaxOptions) : window.location.assign(action);
+                } else if ($e.is(':submit') && $form.length) {
+                    if (usePjax) {
+                        $form.on('submit', function (e) {
+                            $.pjax.submit(e, pjaxOptions);
+                        });
+                    }
+                    $form.trigger('submit');
+                }
+                return;
+            }
+
+            var oldMethod,
+                oldAction,
+                newForm = !$form.length;
+            if (!newForm) {
+                oldMethod = $form.attr('method');
+                $form.attr('method', method);
+                if (isValidAction) {
+                    oldAction = $form.attr('action');
+                    $form.attr('action', action);
+                }
+            } else {
+                if (!isValidAction) {
+                    action = pub.getCurrentUrl();
+                }
+                $form = $('<form/>', {method: method, action: action});
+                var target = $e.attr('target');
+                if (target) {
+                    $form.attr('target', target);
+                }
+                if (!/(get|post)/i.test(method)) {
+                    $form.append($('<input/>', {name: '_method', value: method, type: 'hidden'}));
+                    method = 'post';
+                    $form.attr('method', method);
+                }
+                if (/post/i.test(method)) {
+                    var csrfParam = pub.getCsrfParam();
+                    if (csrfParam) {
+                        $form.append($('<input/>', {name: csrfParam, value: pub.getCsrfToken(), type: 'hidden'}));
+                    }
+                }
+                $form.hide().appendTo('body');
+            }
+
+            var activeFormData = $form.data('yiiActiveForm');
+            if (activeFormData) {
+                // Remember the element triggered the form submission. This is used by yii.activeForm.js.
+                activeFormData.submitObject = $e;
+            }
+
+            if (areValidParams) {
+                $.each(params, function (name, value) {
+                    $form.append($('<input/>').attr({name: name, value: value, type: 'hidden'}));
+                });
+            }
+
+            if (usePjax) {
+                $form.on('submit', function (e) {
+                    $.pjax.submit(e, pjaxOptions);
+                });
+            }
+
+            $form.trigger('submit');
+
+            $.when($form.data('yiiSubmitFinalizePromise')).done(function () {
+                if (newForm) {
+                    $form.remove();
+                    return;
+                }
+
+                if (oldAction !== undefined) {
+                    $form.attr('action', oldAction);
+                }
+                $form.attr('method', oldMethod);
+
+                if (areValidParams) {
+                    $.each(params, function (name) {
+                        $('input[name="' + name + '"]', $form).remove();
+                    });
+                }
+            });
+        },
+
+        getQueryParams: function (url) {
+            var pos = url.indexOf('?');
+            if (pos < 0) {
+                return {};
+            }
+
+            var pairs = $.grep(url.substring(pos + 1).split('#')[0].split('&'), function (value) {
+                return value !== '';
+            });
+            var params = {};
+
+            for (var i = 0, len = pairs.length; i < len; i++) {
+                var pair = pairs[i].split('=');
+                var name = decodeURIComponent(pair[0].replace(/\+/g, '%20'));
+                var value = decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+                if (!name.length) {
+                    continue;
+                }
+                if (params[name] === undefined) {
+                    params[name] = value || '';
+                } else {
+                    if (!$.isArray(params[name])) {
+                        params[name] = [params[name]];
+                    }
+                    params[name].push(value || '');
+                }
+            }
+
+            return params;
+        },
+
+        initModule: function (module) {
+            if (module.isActive !== undefined && !module.isActive) {
+                return;
+            }
+            if ($.isFunction(module.init)) {
+                module.init();
+            }
+            $.each(module, function () {
+                if ($.isPlainObject(this)) {
+                    pub.initModule(this);
+                }
+            });
+        },
+
+        init: function () {
+            initCsrfHandler();
+            initRedirectHandler();
+            initAssetFilters();
+            initDataMethods();
+        },
+
+        /**
+         * Returns the URL of the current page without params and trailing slash. Separated and made public for testing.
+         * @returns {string}
+         */
+        getBaseCurrentUrl: function () {
+            return window.location.protocol + '//' + window.location.host;
+        },
+
+        /**
+         * Returns the URL of the current page. Used for testing, you can always call `window.location.href` manually
+         * instead.
+         * @returns {string}
+         */
+        getCurrentUrl: function () {
+            return window.location.href;
+        }
+    };
+
+    function initCsrfHandler() {
+        // automatically send CSRF token for all AJAX requests
+        $.ajaxPrefilter(function (options, originalOptions, xhr) {
+            if (!options.crossDomain && pub.getCsrfParam()) {
+                xhr.setRequestHeader('X-CSRF-Token', pub.getCsrfToken());
+            }
+        });
+        pub.refreshCsrfToken();
+    }
+
+    function initRedirectHandler() {
+        // handle AJAX redirection
+        $(document).ajaxComplete(function (event, xhr) {
+            var url = xhr && xhr.getResponseHeader('X-Redirect');
+            if (url) {
+                window.location.assign(url);
+            }
+        });
+    }
+
+    function initAssetFilters() {
+        /**
+         * Used for storing loaded scripts and information about loading each script if it's in the process of loading.
+         * A single script can have one of the following values:
+         *
+         * - `undefined` - script was not loaded at all before or was loaded with error last time.
+         * - `true` (boolean) -  script was successfully loaded.
+         * - object - script is currently loading.
+         *
+         * In case of a value being an object the properties are:
+         * - `xhrList` - represents a queue of XHR requests sent to the same URL (related with this script) in the same
+         * small period of time.
+         * - `xhrDone` - boolean, acts like a locking mechanism. When one of the XHR requests in the queue is
+         * successfully completed, it will abort the rest of concurrent requests to the same URL until cleanup is done
+         * to prevent possible errors and race conditions.
+         * @type {{}}
+         */
+        var loadedScripts = {};
+
+        $('script[src]').each(function () {
+            var url = getAbsoluteUrl(this.src);
+            loadedScripts[url] = true;
+        });
+
+        $.ajaxPrefilter('script', function (options, originalOptions, xhr) {
+            if (options.dataType == 'jsonp') {
+                return;
+            }
+
+            var url = getAbsoluteUrl(options.url),
+                forbiddenRepeatedLoad = loadedScripts[url] === true && !isReloadableAsset(url),
+                cleanupRunning = loadedScripts[url] !== undefined && loadedScripts[url]['xhrDone'] === true;
+
+            if (forbiddenRepeatedLoad || cleanupRunning) {
+                xhr.abort();
+                return;
+            }
+
+            if (loadedScripts[url] === undefined || loadedScripts[url] === true) {
+                loadedScripts[url] = {
+                    xhrList: [],
+                    xhrDone: false
+                };
+            }
+
+            xhr.done(function (data, textStatus, jqXHR) {
+                // If multiple requests were successfully loaded, perform cleanup only once
+                if (loadedScripts[jqXHR.yiiUrl]['xhrDone'] === true) {
+                    return;
+                }
+
+                loadedScripts[jqXHR.yiiUrl]['xhrDone'] = true;
+
+                for (var i = 0, len = loadedScripts[jqXHR.yiiUrl]['xhrList'].length; i < len; i++) {
+                    var singleXhr = loadedScripts[jqXHR.yiiUrl]['xhrList'][i];
+                    if (singleXhr && singleXhr.readyState !== XMLHttpRequest.DONE) {
+                        singleXhr.abort();
+                    }
+                }
+
+                loadedScripts[jqXHR.yiiUrl] = true;
+            }).fail(function (jqXHR, textStatus) {
+                if (textStatus === 'abort') {
+                    return;
+                }
+
+                delete loadedScripts[jqXHR.yiiUrl]['xhrList'][jqXHR.yiiIndex];
+
+                var allFailed = true;
+                for (var i = 0, len = loadedScripts[jqXHR.yiiUrl]['xhrList'].length; i < len; i++) {
+                    if (loadedScripts[jqXHR.yiiUrl]['xhrList'][i]) {
+                        allFailed = false;
+                    }
+                }
+
+                if (allFailed) {
+                    delete loadedScripts[jqXHR.yiiUrl];
+                }
+            });
+            // Use prefix for custom XHR properties to avoid possible conflicts with existing properties
+            xhr.yiiIndex = loadedScripts[url]['xhrList'].length;
+            xhr.yiiUrl = url;
+
+            loadedScripts[url]['xhrList'][xhr.yiiIndex] = xhr;
+        });
+
+        $(document).ajaxComplete(function () {
+            var styleSheets = [];
+            $('link[rel=stylesheet]').each(function () {
+                var url = getAbsoluteUrl(this.href);
+                if (isReloadableAsset(url)) {
+                    return;
+                }
+
+                $.inArray(url, styleSheets) === -1 ? styleSheets.push(url) : $(this).remove();
+            });
+        });
+    }
+
+    function initDataMethods() {
+        var handler = function (event) {
+            var $this = $(this),
+                method = $this.data('method'),
+                message = $this.data('confirm'),
+                form = $this.data('form');
+
+            if (method === undefined && message === undefined && form === undefined) {
+                return true;
+            }
+
+            if (message !== undefined && message !== false && message !== '') {
+                $.proxy(pub.confirm, this)(message, function () {
+                    pub.handleAction($this, event);
+                });
+            } else {
+                pub.handleAction($this, event);
+            }
+            event.stopImmediatePropagation();
+            return false;
+        };
+
+        // handle data-confirm and data-method for clickable and changeable elements
+        $(document).on('click.yii', pub.clickableSelector, handler)
+            .on('change.yii', pub.changeableSelector, handler);
+    }
+
+    function isReloadableAsset(url) {
+        for (var i = 0; i < pub.reloadableScripts.length; i++) {
+            var rule = getAbsoluteUrl(pub.reloadableScripts[i]);
+            var match = new RegExp("^" + escapeRegExp(rule).split('\\*').join('.+') + "$").test(url);
+            if (match === true) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+    function escapeRegExp(str) {
+        return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    }
+
+    /**
+     * Returns absolute URL based on the given URL
+     * @param {string} url Initial URL
+     * @returns {string}
+     */
+    function getAbsoluteUrl(url) {
+        return url.charAt(0) === '/' ? pub.getBaseCurrentUrl() + url : url;
+    }
+
+    return pub;
+})(window.jQuery);
+
+window.jQuery(function () {
+    window.yii.initModule(window.yii);
+});
+        20200831163820H      window   window.yii<   $   pub   initCsrfHandler'   initRedirectHandler!   initAssetFilters   initDataMethods#   isReloadableAsset   escapeRegExp   getAbsoluteUrl   styleSheets   loadedScripts   event   $this#   reloadableScripts#   clickableSelector%   changeableSelector   getCsrfParam   getCsrfToken   setCsrfToken!   refreshCsrfToken   confirm   handleAction   getQueryParams   initModule	   init#   getBaseCurrentUrl   getCurrentUrlø   a, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="image"]/   select, input, textarea   $form   params   areValidParams   pjaxOptions   oldMethod   oldAction   newForm   jQuery   yii   module   isActive   undefined   isFunction	   each   initModule/<   ajaxPrefilter#   initCsrfHandler/<   token#   form input[name="   "]   val+   meta[name=csrf-token]	   attr   content+   meta[name=csrf-param]   document   ajaxComplete+   initRedirectHandler/<   script[src]%   initAssetFilters/<   script   url   .this   src   charAt   /   handler   on   click.yii   change.yii   isPlainObject    ØQ      ØQ  ¿         ØQ  /**
+ * Yii JavaScript module.
+ *
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+
+/**
+ * yii is the root module for all Yii JavaScript modules.
+ * It implements a mechanism of organizing JavaScript code in modules through the function "yii.initModule()".
+ *
+ * Each module should be named as "x.y.z", where "x" stands for the root module (for the Yii core code, this is "yii").
+ *
+ * A module may be structured as follows:
+ *
+ * ```javascript
+ * window.yii.sample = (function($) {
+ *     var pub = {
+ *         // whether this module is currently active. If false, init() will not be called for this module
+ *         // it will also not be called for all its child modules. If this property is undefined, it means true.
+ *         isActive: true,
+ *         init: function() {
+ *             // ... module initialization code goes here ...
+ *         },
+ *
+ *         // ... other public functions and properties go here ...
+ *     };
+ *
+ *     // ... private functions and properties go here ...
+ *
+ *     return pub;
+ * })(window.jQuery);
+ * ```
+ *
+ * Using this structure, you can define public and private functions/properties for a module.
+ * Private functions/properties are only visible within the module, while public functions/properties
+ * may be accessed outside of the module. For example, you can access "yii.sample.isActive".
+ *
+ * You must call "yii.initModule()" once for the root module of all your modules.
+ */
+window.yii = (function ($) {
+    var pub = {
+        /**
+         * List of JS or CSS URLs that can be loaded multiple times via AJAX requests.
+         * Each item may be represented as either an absolute URL or a relative one.
+         * Each item may contain a wildcard matching character `*`, that means one or more
+         * any characters on the position. For example:
+         *  - `/css/*.css` will match any file ending with `.css` in the `css` directory of the current web site
+         *  - `http*://cdn.example.com/*` will match any files on domain `cdn.example.com`, loaded with HTTP or HTTPS
+         *  - `/js/myCustomScript.js?realm=*` will match file `/js/myCustomScript.js` with defined `realm` parameter
+         */
+        reloadableScripts: [],
+        /**
+         * The selector for clickable elements that need to support confirmation and form submission.
+         */
+        clickableSelector: 'a, button, input[type="submit"], input[type="button"], input[type="reset"], ' +
+            'input[type="image"]',
+        /**
+         * The selector for changeable elements that need to support confirmation and form submission.
+         */
+        changeableSelector: 'select, input, textarea',
+
+        /**
+         * @return string|undefined the CSRF parameter name. Undefined is returned if CSRF validation is not enabled.
+         */
+        getCsrfParam: function () {
+            return $('meta[name=csrf-param]').attr('content');
+        },
+
+        /**
+         * @return string|undefined the CSRF token. Undefined is returned if CSRF validation is not enabled.
+         */
+        getCsrfToken: function () {
+            return $('meta[name=csrf-token]').attr('content');
+        },
+
+        /**
+         * Sets the CSRF token in the meta elements.
+         * This method is provided so that you can update the CSRF token with the latest one you obtain from the server.
+         * @param name the CSRF token name
+         * @param value the CSRF token value
+         */
+        setCsrfToken: function (name, value) {
+            $('meta[name=csrf-param]').attr('content', name);
+            $('meta[name=csrf-token]').attr('content', value);
+        },
+
+        /**
+         * Updates all form CSRF input fields with the latest CSRF token.
+         * This method is provided to avoid cached forms containing outdated CSRF tokens.
+         */
+        refreshCsrfToken: function () {
+            var token = pub.getCsrfToken();
+            if (token) {
+                $('form input[name="' + pub.getCsrfParam() + '"]').val(token);
+            }
+        },
+
+        /**
+         * Displays a confirmation dialog.
+         * The default implementation simply displays a js confirmation dialog.
+         * You may override this by setting `yii.confirm`.
+         * @param message the confirmation message.
+         * @param ok a callback to be called when the user confirms the message
+         * @param cancel a callback to be called when the user cancels the confirmation
+         */
+        confirm: function (message, ok, cancel) {
+            if (window.confirm(message)) {
+                !ok || ok();
+            } else {
+                !cancel || cancel();
+            }
+        },
+
+        /**
+         * Handles the action triggered by user.
+         * This method recognizes the `data-method` attribute of the element. If the attribute exists,
+         * the method will submit the form containing this element. If there is no containing form, a form
+         * will be created and submitted using the method given by this attribute value (e.g. "post", "put").
+         * For hyperlinks, the form action will take the value of the "href" attribute of the link.
+         * For other elements, either the containing form action or the current page URL will be used
+         * as the form action URL.
+         *
+         * If the `data-method` attribute is not defined, the `href` attribute (if any) of the element
+         * will be assigned to `window.location`.
+         *
+         * Starting from version 2.0.3, the `data-params` attribute is also recognized when you specify
+         * `data-method`. The value of `data-params` should be a JSON representation of the data (name-value pairs)
+         * that should be submitted as hidden inputs. For example, you may use the following code to generate
+         * such a link:
+         *
+         * ```php
+         * use yii\helpers\Html;
+         * use yii\helpers\Json;
+         *
+         * echo Html::a('submit', ['site/foobar'], [
+         *     'data' => [
+         *         'method' => 'post',
+         *         'params' => [
+         *             'name1' => 'value1',
+         *             'name2' => 'value2',
+         *         ],
+         *     ],
+         * ]);
+         * ```
+         *
+         * @param $e the jQuery representation of the element
+         * @param event Related event
+         */
+        handleAction: function ($e, event) {
+            var $form = $e.attr('data-form') ? $('#' + $e.attr('data-form')) : $e.closest('form'),
+                method = !$e.data('method') && $form ? $form.attr('method') : $e.data('method'),
+                action = $e.attr('href'),
+                isValidAction = action && action !== '#',
+                params = $e.data('params'),
+                areValidParams = params && $.isPlainObject(params),
+                pjax = $e.data('pjax'),
+                usePjax = pjax !== undefined && pjax !== 0 && $.support.pjax,
+                pjaxContainer,
+                pjaxOptions = {},
+                conflictParams = ['submit', 'reset', 'elements', 'length', 'name', 'acceptCharset',
+                    'action', 'enctype', 'method', 'target'];
+
+            // Forms and their child elements should not use input names or ids that conflict with properties of a form,
+            // such as submit, length, or method.
+            $.each(conflictParams, function (index, param) {
+                if (areValidParams && params.hasOwnProperty(param)) {
+                    console.error("Parameter name '" + param + "' conflicts with a same named form property. " +
+                        "Please use another name.");
+                }
+            });
+
+            if (usePjax) {
+                pjaxContainer = $e.data('pjax-container');
+                if (pjaxContainer === undefined || !pjaxContainer.length) {
+                    pjaxContainer = $e.closest('[data-pjax-container]').attr('id')
+                        ? ('#' + $e.closest('[data-pjax-container]').attr('id'))
+                        : '';
+                }
+                if (!pjaxContainer.length) {
+                    pjaxContainer = 'body';
+                }
+                pjaxOptions = {
+                    container: pjaxContainer,
+                    push: !!$e.data('pjax-push-state'),
+                    replace: !!$e.data('pjax-replace-state'),
+                    scrollTo: $e.data('pjax-scrollto'),
+                    pushRedirect: $e.data('pjax-push-redirect'),
+                    replaceRedirect: $e.data('pjax-replace-redirect'),
+                    skipOuterContainers: $e.data('pjax-skip-outer-containers'),
+                    timeout: $e.data('pjax-timeout'),
+                    originalEvent: event,
+                    originalTarget: $e
+                };
+            }
+
+            if (method === undefined) {
+                if (isValidAction) {
+                    usePjax ? $.pjax.click(event, pjaxOptions) : window.location.assign(action);
+                } else if ($e.is(':submit') && $form.length) {
+                    if (usePjax) {
+                        $form.on('submit', function (e) {
+                            $.pjax.submit(e, pjaxOptions);
+                        });
+                    }
+                    $form.trigger('submit');
+                }
+                return;
+            }
+
+            var oldMethod,
+                oldAction,
+                newForm = !$form.length;
+            if (!newForm) {
+                oldMethod = $form.attr('method');
+                $form.attr('method', method);
+                if (isValidAction) {
+                    oldAction = $form.attr('action');
+                    $form.attr('action', action);
+                }
+            } else {
+                if (!isValidAction) {
+                    action = pub.getCurrentUrl();
+                }
+                $form = $('<form/>', {method: method, action: action});
+                var target = $e.attr('target');
+                if (target) {
+                    $form.attr('target', target);
+                }
+                if (!/(get|post)/i.test(method)) {
+                    $form.append($('<input/>', {name: '_method', value: method, type: 'hidden'}));
+                    method = 'post';
+                    $form.attr('method', method);
+                }
+                if (/post/i.test(method)) {
+                    var csrfParam = pub.getCsrfParam();
+                    if (csrfParam) {
+                        $form.append($('<input/>', {name: csrfParam, value: pub.getCsrfToken(), type: 'hidden'}));
+                    }
+                }
+                $form.hide().appendTo('body');
+            }
+
+            var activeFormData = $form.data('yiiActiveForm');
+            if (activeFormData) {
+                // Remember the element triggered the form submission. This is used by yii.activeForm.js.
+                activeFormData.submitObject = $e;
+            }
+
+            if (areValidParams) {
+                $.each(params, function (name, value) {
+                    $form.append($('<input/>').attr({name: name, value: value, type: 'hidden'}));
+                });
+            }
+
+            if (usePjax) {
+                $form.on('submit', function (e) {
+                    $.pjax.submit(e, pjaxOptions);
+                });
+            }
+
+            $form.trigger('submit');
+
+            $.when($form.data('yiiSubmitFinalizePromise')).done(function () {
+                if (newForm) {
+                    $form.remove();
+                    return;
+                }
+
+                if (oldAction !== undefined) {
+                    $form.attr('action', oldAction);
+                }
+                $form.attr('method', oldMethod);
+
+                if (areValidParams) {
+                    $.each(params, function (name) {
+                        $('input[name="' + name + '"]', $form).remove();
+                    });
+                }
+            });
+        },
+
+        getQueryParams: function (url) {
+            var pos = url.indexOf('?');
+            if (pos < 0) {
+                return {};
+            }
+
+            var pairs = $.grep(url.substring(pos + 1).split('#')[0].split('&'), function (value) {
+                return value !== '';
+            });
+            var params = {};
+
+            for (var i = 0, len = pairs.length; i < len; i++) {
+                var pair = pairs[i].split('=');
+                var name = decodeURIComponent(pair[0].replace(/\+/g, '%20'));
+                var value = decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+                if (!name.length) {
+                    continue;
+                }
+                if (params[name] === undefined) {
+                    params[name] = value || '';
+                } else {
+                    if (!$.isArray(params[name])) {
+                        params[name] = [params[name]];
+                    }
+                    params[name].push(value || '');
+                }
+            }
+
+            return params;
+        },
+
+        initModule: function (module) {
+            if (module.isActive !== undefined && !module.isActive) {
+                return;
+            }
+            if ($.isFunction(module.init)) {
+                module.init();
+            }
+            $.each(module, function () {
+                if ($.isPlainObject(this)) {
+                    pub.initModule(this);
+                }
+            });
+        },
+
+        init: function () {
+            initCsrfHandler();
+            initRedirectHandler();
+            initAssetFilters();
+            initDataMethods();
+        },
+
+        /**
+         * Returns the URL of the current page without params and trailing slash. Separated and made public for testing.
+         * @returns {string}
+         */
+        getBaseCurrentUrl: function () {
+            return window.location.protocol + '//' + window.location.host;
+        },
+
+        /**
+         * Returns the URL of the current page. Used for testing, you can always call `window.location.href` manually
+         * instead.
+         * @returns {string}
+         */
+        getCurrentUrl: function () {
+            return window.location.href;
+        }
+    };
+
+    function initCsrfHandler() {
+        // automatically send CSRF token for all AJAX requests
+        $.ajaxPrefilter(function (options, originalOptions, xhr) {
+            if (!options.crossDomain && pub.getCsrfParam()) {
+                xhr.setRequestHeader('X-CSRF-Token', pub.getCsrfToken());
+            }
+        });
+        pub.refreshCsrfToken();
+    }
+
+    function initRedirectHandler() {
+        // handle AJAX redirection
+        $(document).ajaxComplete(function (event, xhr) {
+            var url = xhr && xhr.getResponseHeader('X-Redirect');
+            if (url) {
+                window.location.assign(url);
+            }
+        });
+    }
+
+    function initAssetFilters() {
+        /**
+         * Used for storing loaded scripts and information about loading each script if it's in the process of loading.
+         * A single script can have one of the following values:
+         *
+         * - `undefined` - script was not loaded at all before or was loaded with error last time.
+         * - `true` (boolean) -  script was successfully loaded.
+         * - object - script is currently loading.
+         *
+         * In case of a value being an object the properties are:
+         * - `xhrList` - represents a queue of XHR requests sent to the same URL (related with this script) in the same
+         * small period of time.
+         * - `xhrDone` - boolean, acts like a locking mechanism. When one of the XHR requests in the queue is
+         * successfully completed, it will abort the rest of concurrent requests to the same URL until cleanup is done
+         * to prevent possible errors and race conditions.
+         * @type {{}}
+         */
+        var loadedScripts = {};
+
+        $('script[src]').each(function () {
+            var url = getAbsoluteUrl(this.src);
+            loadedScripts[url] = true;
+        });
+
+        $.ajaxPrefilter('script', function (options, originalOptions, xhr) {
+            if (options.dataType == 'jsonp') {
+                return;
+            }
+
+            var url = getAbsoluteUrl(options.url),
+                forbiddenRepeatedLoad = loadedScripts[url] === true && !isReloadableAsset(url),
+                cleanupRunning = loadedScripts[url] !== undefined && loadedScripts[url]['xhrDone'] === true;
+
+            if (forbiddenRepeatedLoad || cleanupRunning) {
+                xhr.abort();
+                return;
+            }
+
+            if (loadedScripts[url] === undefined || loadedScripts[url] === true) {
+                loadedScripts[url] = {
+                    xhrList: [],
+                    xhrDone: false
+                };
+            }
+
+            xhr.done(function (data, textStatus, jqXHR) {
+                // If multiple requests were successfully loaded, perform cleanup only once
+                if (loadedScripts[jqXHR.yiiUrl]['xhrDone'] === true) {
+                    return;
+                }
+
+                loadedScripts[jqXHR.yiiUrl]['xhrDone'] = true;
+
+                for (var i = 0, len = loadedScripts[jqXHR.yiiUrl]['xhrList'].length; i < len; i++) {
+                    var singleXhr = loadedScripts[jqXHR.yiiUrl]['xhrList'][i];
+                    if (singleXhr && singleXhr.readyState !== XMLHttpRequest.DONE) {
+                        singleXhr.abort();
+                    }
+                }
+
+                loadedScripts[jqXHR.yiiUrl] = true;
+            }).fail(function (jqXHR, textStatus) {
+                if (textStatus === 'abort') {
+                    return;
+                }
+
+                delete loadedScripts[jqXHR.yiiUrl]['xhrList'][jqXHR.yiiIndex];
+
+                var allFailed = true;
+                for (var i = 0, len = loadedScripts[jqXHR.yiiUrl]['xhrList'].length; i < len; i++) {
+                    if (loadedScripts[jqXHR.yiiUrl]['xhrList'][i]) {
+                        allFailed = false;
+                    }
+                }
+
+                if (allFailed) {
+                    delete loadedScripts[jqXHR.yiiUrl];
+                }
+            });
+            // Use prefix for custom XHR properties to avoid possible conflicts with existing properties
+            xhr.yiiIndex = loadedScripts[url]['xhrList'].length;
+            xhr.yiiUrl = url;
+
+            loadedScripts[url]['xhrList'][xhr.yiiIndex] = xhr;
+        });
+
+        $(document).ajaxComplete(function () {
+            var styleSheets = [];
+            $('link[rel=stylesheet]').each(function () {
+                var url = getAbsoluteUrl(this.href);
+                if (isReloadableAsset(url)) {
+                    return;
+                }
+
+                $.inArray(url, styleSheets) === -1 ? styleSheets.push(url) : $(this).remove();
+            });
+        });
+    }
+
+    function initDataMethods() {
+        var handler = function (event) {
+            var $this = $(this),
+                method = $this.data('method'),
+                message = $this.data('confirm'),
+                form = $this.data('form');
+
+            if (method === undefined && message === undefined && form === undefined) {
+                return true;
+            }
+
+            if (message !== undefined && message !== false && message !== '') {
+                $.proxy(pub.confirm, this)(message, function () {
+                    pub.handleAction($this, event);
+                });
+            } else {
+                pub.handleAction($this, event);
+            }
+            event.stopImmediatePropagation();
+            return false;
+        };
+
+        // handle data-confirm and data-method for clickable and changeable elements
+        $(document).on('click.yii', pub.clickableSelector, handler)
+            .on('change.yii', pub.changeableSelector, handler);
+    }
+
+    function isReloadableAsset(url) {
+        for (var i = 0; i < pub.reloadableScripts.length; i++) {
+            var rule = getAbsoluteUrl(pub.reloadableScripts[i]);
+            var match = new RegExp("^" + escapeRegExp(rule).split('\\*').join('.+') + "$").test(url);
+            if (match === true) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+    function escapeRegExp(str) {
+        return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    }
+
+    /**
+     * Returns absolute URL based on the given URL
+     * @param {string} url Initial URL
+     * @returns {string}
+     */
+    function getAbsoluteUrl(url) {
+        return url.charAt(0) === '/' ? pub.getBaseCurrentUrl() + url : url;
+    }
+
+    return pub;
+})(window.jQuery);
+
+window.jQuery(function () {
+    window.yii.initModule(window.yii);
+});
+  7   https://employee.neosofttech.com/assets/a031afcf/yii.js   ≥!´!Ä!´!ˇˇˇˇ            é!´!    å!´!ç!´!     †    C  UQ  :  UQ  Ñ@,      $   ≥!´!å!´!ˇˇˇˇ	                        	   
+          å!´!ç!´!      †     Ú7  @9  ⁄7  @9   d        ≥!´!å!´!ˇˇˇˇ              é!´!.   å!´!ç!´!    	 †/   W8  9  N8  9  f  !          5ûé!´!   öò;¯&                                       ø   ·H   ‰m   z ﬂø   ·H   ‰z  ﬂ¶00 `Pë PDÄ k `P,P4 P    5ûå!´!ç!´!      †     b9  h:  F9  h:   n         ≥!´!å!´!ˇˇˇˇ              é!´!8   é!´!9   å!´!ç!´!    	 †:   ¥9  `:  ´9  `:  p  *          5ûöò;¯                                       ø    º   v ·H   ‰m   z ﬂ¶00 `P+P/PDÄ v P     5ûå!´!ç!´!      †     á:  J  n:  J  @x        ≥!´!å!´!ˇˇˇˇ               å!´!é!´!            é!´!;   é!´!,   å!´!ç!´!      †<   £>  ?  ö>  ?   ã  '      ≥!´!å!´!ˇˇˇˇ   >   ?            é!´!@   öò;¯*                                     ﬁ   ﬂø
+   æ  G   v     ﬂø   æ   Oﬂ¶6 `P/P8 `P< P     5ûé!´!.   é!´!=   å!´!ç!´!    	 †<   7?  |H  .?  |H  ê  +       å!´! †-B  ˘D  $B  ˘D  •            5ûå!´! †	E  hG   E  hG  µ            5û 5ûé!´!8   é!´!9   å!´!ç!´!    	  †<   ™H  J  °H  J  Œ  *   @   å!´!  †I  J  ¸H  J  –  4         5ûé!´!    5ûöò;¯b   =                                    5   À   ﬂø      v ·H   ‰m   z ﬂø  ·H   ‰   m   z ﬂø   º   v ·H	   ‰m
+   z ﬂ¶@Ä â `P;0 `P+P/PDÄ ê `Pñ PDÄ Œ `P+P/PDÄ Ÿ P     5ûå!´!ç!´!      †     :J  ˜M  "J  ˜M   €        ≥!´!å!´!ˇˇˇˇ   C            å!´!ç!´!    	 †
+C   ^J  M  UJ  M  ‹     B   å!´!  †%L  oL  L  oL  Á  =          5ûä!´!ä!´!ä!´!é!´!   é!´!    5ûé!´!8   é!´!D   é!´!E   é!´!   é!´!F   é!´!   öò;¯T                                      m       ﬂø    º   v ·H   ‰   ø   G   æ   v ·H   ‰   ø   G   æ   z ﬂ¶0 `PJÄ Ú `P+Pù P:ì P4 P  5ûå!´!ç!´!     †    N  zO  ˝M  zO  ˆ            5ûå!´!ç!´!     † 	   ÒO  IP  ‹O  IP              5ûå!´!ç!´!     † 
+   ÈP  BQ  “P  BQ            ≥!´!å!´!ˇˇˇˇ   >           é!´!A   é!´!B   é!´!   öò;¯E                                 
+     Ω  ·H   ‰v    õ"   ò   ø   ·H   ‰v  Ω  %ö   ò
+   Ω  ò
+   £¶0 `P+Pü Pô0 Q  5ûå!´!é!´!       é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!é!´!   ã!´!    é!´!   é!´!   é!´!   é!´!   é!´!   å!´!ç!´!      †
+   ú  È  ì  È    E         ≥!´!å!´!ˇˇˇˇ              é!´!7   é!´!5   é!´!6   öò;¯                                       ø       v ·H   ‰   v £¶0 `P+P/P3 Q  5ûé!´!   å!´!ç!´!      †
+   ê  ›  á  ›    L         ≥!´!å!´!ˇˇˇˇ              é!´!4   é!´!5   é!´!6   öò;¯                                       ø       v ·H   ‰   v £¶0 `P+P/P3 Q  5ûé!´!   å!´!ç!´!     †
+     ≥    ≥  V             5ûé!´!   å!´!ç!´!      †
+   ï  E  å  E    _   #      ≥!´!å!´!ˇˇˇˇ   0            é!´!   é!´!1   é!´!   é!´!2   é!´!3   öò;¯[   (                                  
+ ø   ·H   ‰v      ﬂæ   õ=   ò   ø       ø   ·H   ‰v  %   %v ·H   ‰æ   z ﬂò   ¶0 `P,P8 `P> `Pó P*ˇˇˇÂP.2PId P     5ûé!´!   å!´!ç!´!     †
+     Ω    Ω  n             5ûé!´!   å!´!ç!´!     †
+   u  /  l  /  ô      @   å!´! †L  h  C  h  ©   ,          5ûå!´! †$  h$  $  h$  Õ   4          5ûå!´! †p+  Û+  g+  Û+  ˛   (          5ûå!´! †L,  ñ,  C,  ñ,    ,          5ûå!´!  †-  /  -  /    I       å!´! †à.  Ô.  .  Ô.    ,          5û 5ûä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!ä!´!é!´!   é!´!    é!´!!   é!´!"   é!´!#   é!´!$   é!´!%    5ûé!´!   å!´!ç!´!     †
+   A/  B3  8/  B3    !       å!´! †0  K0  0  K0  $  Y          5û 5ûé!´!   å!´!ç!´!     †
+    b3  ›4  Y3  ›4   =        ≥!´!å!´!ˇˇˇˇ   (           é!´!)   é!´!*   é!´!+   é!´!   é!´!,   å!´!ç!´!      †-   V4  —4  M4  —4   D  $      ≥!´!å!´!ˇˇˇˇ   ?            é!´!G   é!´!   öò;¯=                                     ﬁ    ﬂø   ·H   ‰æ   v õ   ò   ø   ·H   ‰æ   z ﬂò   ¶6 `Pê P= `Pê P90 P    5ûöò;¯Ö   >                                   Ω  G   º   ù   ò   ﬂΩ  G   ò   õ   ò	    £ò	   ø   ·H   ‰Ω  G   v õ   ò   Ω  ·H   ‰z  ﬂò   ø   ·H   ‰Ω  m   z ﬂ¶0 `Pô !ò0 `PAÄ I FÄ A `Pî P= `P*P90 `Pî PDÄ I P   5ûé!´!   å!´!ç!´!      †
+   ˜4  Ü5  Ó4  Ü5    K        ≥!´!å!´!ˇˇˇˇ              öò;¯)                                 	      ø    z  ﬂø    z  ﬂø    z  ﬂø    z  ﬂ¶0 `P: `P: `P: `P: P   5ûé!´!   å!´!ç!´!      †
+   [6  ¥6  R6  ¥6  V  $          5ûé!´!   å!´!ç!´!      †
+   ñ7  Õ7  ç7  Õ7  _             5ûé!´!   öò;¯Î   `                                   m   À   ﬂm   À   ﬂm   À   ﬂm   À   ﬂm   À   ﬂm   À 	  ﬂm   À 
+  ﬂ5   g    9	   
+   9      9   m   9   m   9   m   9   m   9   m   9   m   9   m   9   m   9   m   9   m    9!   m"   9#   À   ﬂø   £¶Õ0 `PE7 J; J@ JE JL JV J_ Jn JÄ  ô JÄ  JÄ = JÄ K JÄ V JÄ _ ê@Ä  `P5Q     5ûé!´!&   é!´!'   å!´!ç!´!      †Q  ¨Q  vQ  ¨Q            ≥!´!å!´!ˇˇˇˇ              é!´!    é!´!'   é!´!   öò;¯                                        º   G   ·H   ‰º   G   z ﬂ¶0 `Põ P4P     5ûöò;¯4                                       º   m    º   G   v M   ﬂº   ·H   ‰m   z ﬂ¶@,`PKÄ *P90`Pë P400P   ®;àCå      Ü_lüÊ_lüÊB)zÔ_n:R   8    :https://employee.neosofttech.com/assets/a031afcf/yii.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Last-Modified: Mon, 31 Aug 2020 18:49:22 GMT
+Accept-Ranges: bytes
+Content-Length: 20911
+Content-Type: application/javascript
+Date: Wed, 23 Sep 2020 12:11:19 GMT
+Server: Apache
+ original-response-headers Date: Mon, 21 Sep 2020 04:20:54 GMT
+Server: Apache
+Last-Modified: Mon, 31 Aug 2020 18:49:22 GMT
+Accept-Ranges: bytes
+Content-Length: 20911
+Keep-Alive: timeout=10, max=499
+Connection: Keep-Alive
+Content-Type: application/javascript
+ ctid 2 uncompressed-len 0 net-response-time-onstart 320 net-response-time-onstop 320 alt-data 1;20911,javascript/moz-bytecode-20200831163820 alt-data-from-child 1   æ[

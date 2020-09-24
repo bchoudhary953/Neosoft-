@@ -1,0 +1,128 @@
+{
+   "checksum": "2a22237b5c9f0521fc1c5d7d11ec0758",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13245137109781387",
+            "guid": "f519ec22-4685-4ab1-b29b-9ab295396db4",
+            "id": "6",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13245137118556579",
+            "guid": "149ecf0f-7004-4443-b59f-30d714e1568e",
+            "id": "8",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         } ],
+         "date_added": "13245137100572288",
+         "date_modified": "13245137118556579",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13245137100572304",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13200317770819345",
+            "guid": "839a1c1e-9a77-44d8-9a60-52aa9bababd6",
+            "id": "9",
+            "meta_info": {
+               "last_visited": "13200585896650804"
+            },
+            "name": "Pragmatic Programming Techniques: OLAP operation in R",
+            "type": "url",
+            "url": "http://horicky.blogspot.com/2013/07/olap-operation-in-r.html?m=1"
+         }, {
+            "date_added": "13210878353983567",
+            "guid": "74cc57fc-208c-42d6-8090-0bfd631d7ce3",
+            "id": "10",
+            "name": "GitHub - aoflynn/DynAlarm: Final Year Project Repo",
+            "type": "url",
+            "url": "https://github.com/aoflynn/DynAlarm"
+         }, {
+            "date_added": "13213911097921462",
+            "guid": "9b435812-883a-4c0f-8366-0225de6f49fc",
+            "id": "11",
+            "name": "$group (aggregation) — MongoDB Manual",
+            "type": "url",
+            "url": "https://docs.mongodb.com/manual/reference/operator/aggregation/group/#pipe._S_group"
+         }, {
+            "date_added": "13214121434088006",
+            "guid": "697ccfc7-40cc-4294-b213-eac27fefad33",
+            "id": "12",
+            "name": "Importance Of Artificial Intelligence. Here's What You Need To Know",
+            "type": "url",
+            "url": "https://mindmajix.com/why-ai-is-more-important-than-you-think"
+         }, {
+            "date_added": "13217772441017659",
+            "guid": "a3861fc8-7b23-4ed2-8fe4-a25d5ffe8d66",
+            "id": "13",
+            "name": "Recommender system - Wikipedia",
+            "type": "url",
+            "url": "https://en.m.wikipedia.org/wiki/Recommender_system"
+         }, {
+            "date_added": "13217773431929728",
+            "guid": "5bac0ade-4414-4be4-b0ad-ffed33a188a2",
+            "id": "14",
+            "name": "Use Cases of Recommendation Systems in Business – Current Applications and Methods | Emerj",
+            "type": "url",
+            "url": "https://emerj.com/ai-sector-overviews/use-cases-recommendation-systems/"
+         }, {
+            "date_added": "13226153304482571",
+            "guid": "d02edce2-9d0f-418d-8e04-2ca044bd3b12",
+            "id": "15",
+            "name": "Berkeley's Algorithm - GeeksforGeeks",
+            "type": "url",
+            "url": "https://www.google.com/amp/s/www.geeksforgeeks.org/berkeleys-algorithm/amp/"
+         }, {
+            "date_added": "13228252900802777",
+            "guid": "239ed65d-8e7c-4227-b47b-17ebef2ef7c2",
+            "id": "16",
+            "name": "Installing XenCenter - Implementing Citrix XenServer Quickstarter",
+            "type": "url",
+            "url": "https://subscription.packtpub.com/book/virtualization_and_cloud/9781849689823/2/ch02lvl1sec18/installing-xencenter"
+         }, {
+            "date_added": "13228578878865651",
+            "guid": "c1da91d0-f55c-4c17-9f1a-68faf5339d9f",
+            "id": "17",
+            "name": "Using either…or and neither…nor",
+            "type": "url",
+            "url": "https://www.englishgrammar.org/eitheror-neithernor/"
+         }, {
+            "date_added": "13228588125959661",
+            "guid": "e192ac42-22f8-437a-ab9a-3c9d58a67ba3",
+            "id": "18",
+            "name": "Install OwnCloud on Ubuntu 18.04 LTS with Apache2, MariaDB and PHP 7.1 Support | Website for Students",
+            "type": "url",
+            "url": "https://websiteforstudents.com/install-owncloud-on-ubuntu-18-04-lts-beta-with-apache2-mariadb-and-php-7-1-support/"
+         }, {
+            "date_added": "13236697125586629",
+            "guid": "6714bb67-bf4f-4d24-af4b-39d9f07dee6a",
+            "id": "19",
+            "name": "Virtual desktop: 6 advantages of uploading your virtual desktop to the cloud",
+            "type": "url",
+            "url": "https://ausum.cloud/en/blog/desktop-service/2019/virtual-desktop-6-advantages-uploading-your-virtual-desktop-cloud"
+         } ],
+         "date_added": "13245137100572306",
+         "date_modified": "13236697125586629",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CrABCo8BCIiBAhKIARJ2CAISOAoGCgJibRABEDMaEgkA3zyuy68FACEA3zyuy68FADIYChYIAhFeVJ69y68FABgAIQAAAAAAAAAAEjgKBgoCYmQQABAzGhIJAN88rsuvBQAhAN88rsuvBQAyGAoWCAIRXlSevcuvBQAYACEAAAAAAAAAACAASInCpvjKLnCJwqb4yi4SACABKhhndUZuSDN5RWRLbEJNMGlMZTIrMkJnPT0SrAIIBhKnAgoceDNtSURCZGdFZnJCUjJMM1RQbVNPcmtkNGtrPRKmAVo6QURxdEFaeFVydlR6UWpZRE1sc3YzSTVnR1J4Y1A3d0dNdy9mMWpoTzVpOEZnakVWamFheEZSaldpSEpVSlVFT2ZXYlgyTXBCOGdXYkVBVWJUcFRNc1JmbEZtY01CRnhMTERHRENtV1dnTmVXQm1PYnhrMWRjRi8yYnozVHhTZURDdzhQd0hHRU5zeGVTMFhqSVpYa2h5Mml3Vk1MT1pmdm9RPT0YACABKAEw24y2vLj56wI4k47v98ouQJOO7/fKLkoccDZBVDhVTWJ0VDVrREZRaGxmMVVTRnpRKzU0PVoeIhxkN3M1Z3NWcXF3VmhVZ2VpekFYL3RDak1LQnc9ZawSYgISrQIICBKoAgocMVIxUXVDdkpPUDg2RHQrVjA5RlNZTEFRTjBVPRKmAVo6QURxdEFaeFVydlR6UWpZRE1sc3YzSTVnR1J4Y1A3d0dNdy9mMWpoTzVpOEZnakVWamRuWVJsNGRMT3lFYi9HWmlKT1lBZGtENnBTTEJ2YVVnTnZjR0pOSG5ZdkRMUVUxdWVrcFRLaWJwa3dySy9aK1dkSEFKdGUyTjU4bEVYRGp0bEE2bDY5TFdDemk2bTByekNLaG5zRE1VSlg2YUxmZTJ3PT0YACACKAIw6NW0wrj56wI4k47v98ouQPvj7/fKLkocRCtVNEVLdWQzdTF2N3FxVFpmQkxiMnM0b3I0PVofIh2yMlVBMHU5ekc1MmtmWHBzUk9zNTl4ZXNFc0M4PWUH+8bXEqwCCAkSpwIKHER4NFRkT24waThRNTFDYytpekU0aVpQcVk5TT0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNQSGI3TkJab1RwY3ZjWDFUY0plNTZSdkFPZFp2ODU4ck5OOTA4MFd1Q0ZNL2U4MDBVWVhXK3VaUWdlS3FGZ2MvdUxHam9paUsvdWNpTUtrNUdmNXo1WW93RExYM2duN016eThTRDFBZzBjVzB1OGg1TStoNkFLQi9zRTV1Y1Y1ZmgxSUN4dz09GAAgACgAMLeso4yu8usCOMWIqPyjLUDFiKj8oy1KHDlKSGNGN3UwSHBSdUtadGc2bVc0NEl1Q1Jwbz1aHiIcQWtBSTMzR2FmMWhtRlBaTUFWaTFhU0hZY0V3PWWfUOFqEq0CCAoSqAIKHHRYZmdEdzBhUmZJSEpES2JrVWE3dGN2MXcwQT0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNWcHJVdElkUXBid3dLbmpyTmdDN24rNnhHRE9DZHRnTVNkdkIxK1dXTFQrOWYvaUlSTWhNcUpBZVdtOHR3aGZZMzVTVEtMb3RVV2ltRElLdUhYK2NvN1REcHpFTXBJSW5oZjdtU3NnaGlUUjd0MXNhek1EMlBhbFo5YTVnNGI4Q1R0SGxSUT09GAAgACgAMLeso4yu8usCOMH0/qfLLUDB9P6nyy1KHEZGVHZ2aWtvdXkxeEkreTNLcEhBeUk0N0ZWMD1aHyId+09hTXBOYUE5Q0x1YWJ6YWE1c2xQMmZNM3JCMD1l5SbHMhKuAggREqkCChx5N1dnWkNsVjVjQXV0M05IM0VwdGJzQ0crUEk9EqYBWjpBRHF0QVp4VXJ2VHpRallETWxzdjNJNWdHUnhjVnByVXRJZFFwYnd3S25qck5nQzduK0NvZjBlc2lmSFVydUFtT0JVbjk2RDJ0VTB2ekFoUzJKN1p3ZkJMV1RRbFJFZEN6dERoeUdTYUtFSUxuL0lhMmNSdTBFa3plZVlHWFFLQXp5RXZUaDd5bml6YXRMZGJkcVU3dVd2NUhEaWNzV0pFeGc9PRgAIAAoADC3rKOMrvLrAjiUm6GgjS5AlJuhoI0uShxUNU1ONnYyYnVHWnM0UkgxUGsyQTNtN0gyUmM9WiAiHv/7bVFtZGtpOFRJV0V0SjloeHlDUDVJWFdxclhVPWW5iRmhEq4CCA0SqQIKHFB3bDdENkordVBRM2tHLzZFeGI4UlJpSzNOcz0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNWcHJVdElkUXBid3dLbmpyTmdDN24vb1ZoSzB3T3V0K05EeU54SEY1NEx1TWpKb0VvUGR2RnVSeGhhdkx0ZWVrUkpiZWJtRk42bzlrc3FFVERpUW5QWmJmZkZLQ01jOVVXVVVldW85MjRZTUNyaDVUSEJzTzFvenNQVmxBKytrWHRDMnJ1QT09GAAgACgAMLeso4yu8usCOLvLrP/kLUC7y6z/5C1KHGJ0OFR1aytOOFZZdDdwSVRSeHBpamdMRTRhOD1aICIe/7JYR2E5U3VuczVxWjhkVUY2UHFtdlZDckpWY1E9ZfiVxHASrgIIEhKpAgocME54b0c3dTR6Z3ZGdnBzVDRxSGhPRlV2SXFrPRKmAVo6QURxdEFaeFVydlR6UWpZRE1sc3YzSTVnR1J4Y1ZwclV0SWRRcGJ3d0tuanJOZ0M3bjF4VU8xYW9tRVZOL29hZDB4ZmlSZWtuaS8zeTlxbjdEUmptL2l0ZlY5Zmd6SUwxSEVTdEh5SEI3RVVqenBubExWTG80bmlZWmI1eDUyK3pWVUwreGI0cDJRUHVSWDRDS0VjL1FRNy90N1ZMdzRicVB3PT0YACAAKAAwt6yjjK7y6wI4j87VpI0uQI/O1aSNLkocQU81U1BWSjlBRDUwdS8wa293ODFoT0pDUzZNPVogIh7//UovWGtScFZuK3poZ29FZERxR3o1QkkrUHhMcz1lWLfWkxKuAggPEqkCChxobk9iRW5oR2lhdFFPTmhyMDg0eWRqYjFtMTg9EqYBWjpBRHF0QVp4VXJ2VHpRallETWxzdjNJNWdHUnhjVnByVXRJZFFwYnd3S25qck5nQzduMlRPNi9FU3U5VUJpOVVhQ0p2VUdPWkhWRWpXNENZbGlZcTlHMDZhWVpOYS9qb2RHRjByQ0Qxd3VPNVVCZTh6VVBOWk5sMXFzaGc2YnFrcnRTNjNjbXE5SEtMbG56ZnVNZmozamhIWUhKYmk1Uk92eXc9PRgAIAAoADC3rKOMrvLrAjil89ObhC5ApfPTm4QuShxmSTNDM1pxeldxcGJlVUxQRUkyMFZ4Y2M0QlE9WiAiHv/sUytSa1kzeDJXZHQvT01SY2hBSU5vZkhVaitBPWWD0xz6Eq0CCAwSqAIKHEdTUkpsS0VrM2lFNHB3RENkQ1ZJTlNZbGI0RT0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNWcHJVdElkUXBid3dLbmpyTmdDN24zTmNhcGtPZUJLWk1TSGdmYTVLRkdpTStHSSt2Qi9rOWpQSU1qUUxPeDY2L01qQ2gzdFlxS2VCMDUvUmNOaHVPK25DYXJ4Z1U2WHRleitCdnZVamNwWnJSYkRFSkR1ajZXNmk5ekpKN1dKMXlYdlZrZz09GAAgACgAMLeso4yu8usCOPHntLLXLUDx57Sy1y1KHHZ3NDZ0MUlvbUsrRXZoNWk2ekhEZXA0OC92WT1aHyId/2VZWmlMS0U3dG5vZDBXTkZFdVo5T2ZKcXhRQT1lkzG4mhKuAggQEqkCChxIZGFUR2pXR25mbmUvbnRLbDVXeEJ2UmRpTjA9EqYBWjpBRHF0QVp4VXJ2VHpRallETWxzdjNJNWdHUnhjVnByVXRJZFFwYnd3S25qck5nQzduNzF5YXhpUkcvRjc5bTUyanl4UVZiNjdyQjJGL0pueVNoMUg5SkJqd2xPZHB1VHJvTXJqajhDZDFTRnZ5ZVR6akZqOStZTDkvZ3lpWmpUOTVDK01KREtXRGwzV200a2p5M3ovMHhla05vU2EzYkJMd0E9PRgAIAAoADC3rKOMrvLrAjjEi+mEjC5AxIvphIwuShxTemVNVEl2RGxHNFJmL2dXdFB6OXdlRE0wcDA9WiAiHv/2SmpQMGFwUUdtWHVaUEZoYkRmUks5RDU1MXBjPWX3GaWwEq4CCA4SqQIKHFB1S3dWeXd0K1RrMS83TDJtLzE0T04wejlkRT0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNWcHJVdElkUXBid3dLbmpyTmdDN243TytSclBwWGVlelpnYmRkelVwYW92VWVaTndGaU1Cc2NSQmhQTC9hZmJtazVhc1FSSkN0VXQ3ZXFRbEhLNGpNSFk0ZC85djk3RE9IU01jTnZlb3I0cThzck9uSHBwU2hkL2J1bmU0UHg4bVhDd21IQT09GAAgACgAMLeso4yu8usCOP6I6f/kLUD+iOn/5C1KHGsxdzhZSmtDL3lFK3BobHZZelpzT0RTT2ljcz1aICIe/9l2QmhZRlhMVVhIVXpHOEZHWit5SFVUeW1xMjQ9ZYPfJh8SrQIICxKoAgocVXgwL05IOHVBekJvKzdVZkQ3dTF1MnVMYUFrPRKmAVo6QURxdEFaeFVydlR6UWpZRE1sc3YzSTVnR1J4Y1ZwclV0SWRRcGJ3d0tuanJOZ0M3bjhJS3Q3WFZ0aUlFeDAxcUVYRUFBcTVIcWgxSnFuNEZGZHVwNlhCaCtQbHpUeVZodUhiNDBsWUMycHc4dDVGWHQzVG1XY21BZEdZM0MwNFNVZ3g3VVRNdmF2MFNYRW50QW5Rd3VvdnZQQXllR3ZrbGR3PT0YACAAKAAwt6yjjK7y6wI4w/SOztYtQMP0js7WLUocTmNLRzIzd1Z4RUljN2Erc3NweDgxb0pEQm80PVofIh3/VUVsWWdDUGpnQzV5S1RWNXN0TnVubGlmem5FPWV4m1uGEq4CCBMSqQIKHC9hVU1pcU1kQ25TM0dyZzBwcUNudERSV25OQT0SpgFaOkFEcXRBWnhVcnZUelFqWURNbHN2M0k1Z0dSeGNWcHJVdElkUXBid3dLbmpyTmdDN244eWk5V3U1V1d1MHZHQ1VqZk8wWnYyRUNyQW15ZDJsN01KRVhIMW9tSDFSeFE1R3gyUTVyYU9YSEZmRDhtdlM5eWh5Zjh3cUJ5SWgwTXlwS3EzTEYya29QRC8ybjdmendZSE00ZnUwbUVOeU0rS2dtdz09GAAgACgAMK2Wtcur8usCONXVq7+rLkDV1au/qy5KHHgxakhKWURiUEZJM29WeDZjcXFVTU5Ybkh0bz1aICIe//5LVmtpZ2ZzYWRPTk5Kb2ZkQU9DTGJsSi9OQ0U9ZQwnVYwSqwEIARKmAQocL0VLTGFVVXlNZGJLRWsxQmEyVWlueURuZjdJPRJOWjpBRHF0QVp5VWZwZ0dlSk1sdC9oZUFFSjZIaERDeEVteVREZms1bVlvVmh3clo2dzFndGZ0Um1vUk1EbzNtYmFaVFEyMUw1VXdLbTl2GAAgACgAMLLkkbu4+esCOABAAEocVStHR0l0WkVEcFpzSVNsT1VhSVR1SUxkTW5JPVoAZQAAAAASwwEIAhK+AQocekRWR3JydFpMZE0rNEJUeWJnK0hDT3JXZ3lvPRJmWjpBRHF0QVp6N0gwWjN1RDBxYktvN2FCeHNyckRUTytybjQzMVRzN1ZVUU80Wm5iaVdmS0RxZnNiSlVHbHVodEZLWWdqZXVhTEg3Y2kzS0Q4RE9KekRsNVNTcE9ONzRTek1lUT09GAAgACgAMLLkkbu4+esCOABAAEocNXVzeS9jcGZwaTFFdG9CSERnWElzMHFiNHJBPVoAZQAAAAASwwEIAxK+AQoceTVXRTI3dUk2dlgvRGVJU0hKem5qTXF1V1dzPRJmWjpBRHF0QVp6eEZ4M0JENzZndDlRemNXSGNiblZNRHJVaWVqZjNQL0J1QzFKak9nbERRNDBJRU9ybjFybU5DaTBmajR0di9XMndreVRHOFc3VkE0clhyS1ZuVEExSGZhWENZdz09GAAgACgAMLLkkbu4+esCOABAAEocNzlsK0xSRVVwaWFFdkREK0c0M2NwWFN0d0JjPVoAZQAAAAAYAA==",
+   "version": 1
+}

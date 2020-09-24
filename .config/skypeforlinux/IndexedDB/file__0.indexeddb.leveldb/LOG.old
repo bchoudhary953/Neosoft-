@@ -1,0 +1,21 @@
+2020/09/23-09:58:41.847 725 Reusing MANIFEST /home/webwerks/.config/skypeforlinux/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2020/09/23-09:58:41.848 725 Recovering log #16
+2020/09/23-09:58:41.865 725 Reusing old log /home/webwerks/.config/skypeforlinux/IndexedDB/file__0.indexeddb.leveldb/000016.log 
+2020/09/23-10:58:44.070 1052 Level-0 table #21: started
+2020/09/23-10:58:44.101 1052 Level-0 table #21: 2123554 bytes OK
+2020/09/23-10:58:44.111 1052 Delete type=0 #16
+2020/09/23-11:25:42.743 1052 Compacting 1@1 + 1@2 files
+2020/09/23-11:25:42.779 1052 Generated table #22@1: 4263 keys, 1054121 bytes
+2020/09/23-11:25:42.779 1052 Compacted 1@1 + 1@2 files => 1054121 bytes
+2020/09/23-11:25:42.787 1052 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/23-11:25:42.787 1052 Delete type=2 #21
+2020/09/23-11:25:42.787 1052 Delete type=2 #18
+2020/09/23-16:16:35.827 1052 Level-0 table #24: started
+2020/09/23-16:16:35.863 1052 Level-0 table #24: 1677268 bytes OK
+2020/09/23-16:16:35.875 1052 Delete type=0 #20
+2020/09/23-16:58:51.213 1052 Compacting 1@1 + 1@2 files
+2020/09/23-16:58:51.250 1052 Generated table #25@1: 4579 keys, 954259 bytes
+2020/09/23-16:58:51.250 1052 Compacted 1@1 + 1@2 files => 954259 bytes
+2020/09/23-16:58:51.258 1052 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/23-16:58:51.258 1052 Delete type=2 #24
+2020/09/23-16:58:51.258 1052 Delete type=2 #22
